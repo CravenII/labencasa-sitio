@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monta tu Netflix casero con Jellyfin: hardware necesario</title>
+<meta name="description" content="Qué hardware necesitas para montar tu Netflix casero con Jellyfin: lista de materiales, almacenamiento real y las 3 decisiones clave antes de comprar.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>Monta tu Netflix casero con Jellyfin: hardware necesario</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<h2>Qué vas a lograr</h2>
+<p>Un servidor de medios personal, disponible en tu televisor, móvil, tablet y ordenador, con tu propia biblioteca de películas, series, música y fotos. Sin cuotas mensuales, sin que nadie decida qué contenido desaparece este mes y con la libertad de organizar tu colección como quieras. Este proyecto está en marcha en nuestro propio home lab.</p>
+<p>Jellyfin es el software gratuito y de código abierto que lo hace posible: convierte cualquier equipo con almacenamiento en un centro multimedia con interfaz moderna, carátulas, sinopsis y perfiles de usuario. El resto es elegir bien el hardware para que reproduzca fluido hoy y no se quede corto mañana.</p>
+
+<h2>Lista de materiales</h2>
+<p>Estos son los componentes que necesitas. No hace falta comprarlos todos a la vez: mucha gente empieza con lo que ya tiene en casa y amplía después.</p>
+<table>
+<thead>
+<tr><th>Qué</th><th>Por qué lo necesitas</th><th>Precio orientativo (sep 2026)</th><th>Enlace</th></tr>
+</thead>
+<tbody>
+<tr><td>Equipo base: mini PC o Raspberry Pi 5</td><td>Es el "cerebro": ejecuta Jellyfin y sirve el contenido a tus dispositivos.</td><td>Mini PC: entre $120 y $250 · Pi 5: entre $80 y $120 con accesorios</td><td><a href="[ENLACE_AFILIADO_1]">Ver precio</a></td></tr>
+<tr><td>Disco duro para la biblioteca (4–8 TB)</td><td>El contenido ocupa mucho: este disco es tu videoteca.</td><td>Entre $90 y $200 según capacidad</td><td><a href="[ENLACE_AFILIADO_2]">Ver precio</a></td></tr>
+<tr><td>Memoria RAM suficiente (mínimo 8 GB)</td><td>Jellyfin con varios usuarios y transcodificación agradece memoria de sobra.</td><td>La mayoría de mini PC ya la incluyen</td><td><a href="[ENLACE_AFILIADO_3]">Ver precio</a></td></tr>
+<tr><td>Fuente de alimentación adecuada</td><td>Una fuente insuficiente provoca reinicios y corrupción de datos: no escatimes aquí.</td><td>Entre $15 y $40</td><td><a href="[ENLACE_AFILIADO_4]">Ver precio</a></td></tr>
+<tr><td>Cable Ethernet y conexión por cable</td><td>El streaming 4K necesita una red estable: el cable supera al WiFi siempre.</td><td>Entre $8 y $20</td><td><a href="[ENLACE_AFILIADO_5]">Ver precio</a></td></tr>
+<tr><td>Segundo disco o copia de seguridad (opcional pero recomendado)</td><td>Si muere el disco de la biblioteca, pierdes todo. Una copia externa te salva.</td><td>Entre $90 y $200</td><td><a href="[ENLACE_AFILIADO_6]">Ver precio</a></td></tr>
+</tbody>
+</table>
+
+<h2>Antes de comprar: 3 decisiones</h2>
+
+<h3>1. Transcodificación por CPU o por GPU</h3>
+<p>Cuando tu televisor o móvil no puede reproducir un archivo tal cual está, Jellyfin lo convierte sobre la marcha (transcodificación). Si casi todos tus dispositivos reproducen el formato original —la llamada <em>reproducción directa</em>—, casi cualquier equipo modesto basta.</p>
+<p>Si vas a servir a varios dispositivos distintos a la vez, o tienes contenido en 4K que algunos clientes no soportan, la transcodificación por hardware ayuda mucho. Según las especificaciones del fabricante, los mini PC con procesadores Intel modernos incluyen gráficos integrados con aceleración de vídeo (Quick Sync), que la comunidad de usuarios reporta como una opción eficiente para transcodificar varios flujos sin disparar el consumo. Una Raspberry Pi 5, en cambio, rinde bien con reproducción directa pero no es la elección ideal si dependes de transcodificar 4K con frecuencia.</p>
+<p><strong>Regla práctica:</strong> si tu biblioteca está en formatos compatibles con tus dispositivos (H.264/H.265 en MP4 o MKV), prioriza almacenamiento y red antes que potencia bruta.</p>
+
+<h3>2. Cuánto almacenamiento real necesitas</h3>
+<p>Haz la cuenta antes de comprar el disco. Como orientación general: una película en 1080p suele ocupar entre 8 y 15 GB, y una en 4K puede superar los 50 GB. Una serie completa en buena calidad suma rápido. Con un disco de 4 TB caben varios cientos de películas en 1080p; con 8 TB, una colección familiar seria más margen para crecer.</p>
+<p>Deja siempre entre un 20 y un 30 % de espacio libre: los discos llenos hasta el borde rinden peor y no dejan sitio para añadir contenido nuevo. Y recuerda que el sistema operativo y las miniaturas que genera Jellyfin también ocupan espacio, así que conviene separar el disco del sistema del disco de la biblioteca.</p>
+
+<h3>3. Red cableada o WiFi para el streaming</h3>
+<p>El servidor siempre por cable. Un flujo 4K necesita entre 25 y 50 Mbps sostenidos y estables, y el WiFi introduce latencia y microcortes que se notan justo en la escena importante. Conecta el equipo de Jellyfin al router o a un switch con cable Ethernet gigabit: es la mejora más barata y con más impacto de todo el proyecto.</p>
+<p>Los clientes (televisor, tablet) pueden ir por WiFi sin problema si la señal es buena, pero si tu televisor principal está cerca del router, cablearlo también elimina la mayoría de los problemas de buffering.</p>
+
+<h2>El proyecto paso a paso (resumen)</h2>
+<p>Sin entrar en comandos concretos, el proceso es este:</p>
+<ol>
+<li><strong>Instala el sistema operativo</strong> en el equipo base. Una distribución Linux ligera es la opción habitual para un servidor que estará encendido 24/7.</li>
+<li><strong>Instala Docker</strong> para aislar Jellyfin del resto del sistema: facilita las actualizaciones y evita conflictos de dependencias.</li>
+<li><strong>Despliega el contenedor de Jellyfin</strong> indicando dónde está tu biblioteca de medios y qué puertos usar. La imagen oficial está bien documentada por el proyecto.</li>
+<li><strong>Añade tus bibliotecas</strong> desde la interfaz web: películas, series, música y fotos, cada una en su carpeta. Jellyfin descarga carátulas y metadatos automáticamente.</li>
+<li><strong>Instala las apps cliente</strong> en tu televisor, móvil y tablet, crea los perfiles de usuario y ajusta la calidad de reproducción según tu red.</li>
+</ol>
+<p>Desde la primera biblioteca hasta ver tu primera película suelen pasar un par de horas en una tarde tranquila, la mayoría esperando a que se descarguen los metadatos.</p>
+
+<h2>Alternativas por presupuesto</h2>
+<ul>
+<li><strong>Ajustado (reutilizando lo que tengas):</strong> una Raspberry Pi 5 con un disco duro USB externo. Perfecto para reproducción directa en 1080p para uno o dos usuarios simultáneos. Es la puerta de entrada más barata al proyecto.</li>
+<li><strong>Equilibrado (la recomendación general):</strong> un mini PC con procesador Intel de gama eficiente (tipo N100 o similar), 8–16 GB de RAM y un disco interno o externo de 4–8 TB. Cubre transcodificación ocasional, varios usuarios y deja margen de crecimiento.</li>
+<li><strong>Sin límite:</strong> un mini PC potente o un pequeño servidor con bahías para varios discos, red de 2,5 GbE y almacenamiento en espejo. Para quien quiere biblioteca 4K grande, varios usuarios fuera de casa y cero compromisos.</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Es legal montar un Netflix casero con Jellyfin?</h3>
+<p>Jellyfin es software libre y totalmente legal. Lo que debes respetar son los derechos de tu contenido: úsalo con películas, series y música que poseas o que tengas derecho a almacenar, igual que harías con cualquier disco duro.</p>
+<h3>¿Puedo ver mi biblioteca fuera de casa?</h3>
+<p>Sí, configurando acceso remoto. La opción más segura para la mayoría es una VPN privada (como Tailscale o WireGuard) en lugar de exponer Jellyfin directamente a internet. Ten en cuenta que tu velocidad de subida limita la calidad fuera de casa.</p>
+<h3>¿Funciona en Smart TV?</h3>
+<p>Jellyfin tiene aplicaciones para las principales plataformas de Smart TV, además de Android TV, Fire TV, móviles y navegadores web. Si tu televisor es antiguo, un Chromecast o un stick de streaming barato lo resuelve.</p>
+<h3>¿Necesito una tarjeta gráfica dedicada?</h3>
+<p>En la inmensa mayoría de los casos, no. La aceleración integrada de los procesadores modernos es suficiente para un uso doméstico, y la reproducción directa ni siquiera necesita transcodificar.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="01-raspberry-pi-5-vs-mini-pc.html">Raspberry Pi 5 vs. mini PC barato: qué conviene para tu home lab en 2026</a></li>
+<li><a href="04-ssd-vs-hdd-servidor-medios.html">SSD vs. HDD para tu servidor de medios: cuándo conviene cada uno</a></li>
+<li><a href="08-guia-raspberry-pi-5-que-comprar.html">Guía de compra: Raspberry Pi 5 — RAM, fuente y caja</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

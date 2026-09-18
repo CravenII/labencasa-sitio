@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSD vs HDD para servidor de medios: cuándo conviene cada uno</title>
+<meta name="description" content="Precio por TB, ruido, consumo y resistencia: comparamos SSD y HDD para tu servidor de medios y cuándo compensa cada uno.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>SSD vs. HDD para tu servidor de medios: cuándo conviene cada uno</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<p>Montas tu Jellyfin o Plex, y llega la pregunta del millón: ¿guardo los 4 TB de películas en un SSD o en un disco duro de toda la vida? La respuesta corta es que <strong>la mayoría de servidores caseros usan los dos</strong>, cada uno para lo que hace mejor. La respuesta larga —cuándo compensa un SSD grande y cuándo es tirar el dinero— es lo que desgranamos aquí.</p>
+
+<h2>Lo fundamental: para reproducir video, la velocidad sobra</h2>
+<p>Un dato que cambia toda la ecuación: reproducir una película en 4K necesita unos <strong>25–50 Mbps</strong> de lectura sostenida. Un disco duro mecánico moderno entrega <strong>150–250 MB/s</strong>, es decir, entre 1.200 y 2.000 Mbps. Incluso con varias reproducciones simultáneas, el HDD va sobrado para servir archivos de video.</p>
+<p>El SSD brilla en <strong>accesos aleatorios y pequeños</strong>: arrancar el sistema, cargar la base de datos de la biblioteca, generar miniaturas, mover la caché de transcodificación. Ahí un NVMe es decenas de veces más rápido que un HDD. Por eso la combinación ganadora es tan clara.</p>
+
+<h2>Comparativa: SSD frente a HDD</h2>
+<table>
+<thead>
+<tr><th>Criterio</th><th>SSD (SATA/NVMe)</th><th>HDD (mecánico)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Precio por TB (orientativo)</strong></td><td>Entre $50 y $90 por TB en 1–4 TB (septiembre de 2026)</td><td>Entre $15 y $30 por TB en 4–12 TB (septiembre de 2026)</td></tr>
+<tr><td><strong>Velocidad secuencial</strong></td><td>500 MB/s (SATA) hasta 3.000–7.000 MB/s (NVMe)</td><td>150–250 MB/s</td></tr>
+<tr><td><strong>Acceso aleatorio</strong></td><td>Muy superior: ideal para sistema y bases de datos</td><td>Lento en aleatorio; suficiente en secuencial</td></tr>
+<tr><td><strong>Ruido</strong></td><td>Silencio total (sin partes móviles)</td><td>Audible: giro, cabezales y vibración</td></tr>
+<tr><td><strong>Consumo</strong></td><td>Muy bajo (2–6 W en uso)</td><td>Moderado (5–10 W en uso, según especificaciones)</td></tr>
+<tr><td><strong>Resistencia a golpes</strong></td><td>Alta (sin mecánica)</td><td>Baja: un golpe en marcha puede matarlo</td></tr>
+<tr><td><strong>Desgaste</strong></td><td>Ciclos de escritura limitados (TBW); irrelevante en uso doméstico normal</td><td>Desgaste mecánico con los años; los NAS vigilan su salud con SMART</td></tr>
+<tr><td><strong>Capacidades habituales</strong></td><td>Hasta 4–8 TB a precio razonable</td><td>Hasta 20–24 TB por disco</td></tr>
+</tbody>
+</table>
+
+<h2>La combinación típica: sistema en SSD, almacén en HDD</h2>
+<p>Es la arquitectura que recomiendan la mayoría de guías de la comunidad y la que mejor equilibra coste y rendimiento:</p>
+<ul>
+<li><strong>SSD (250 GB – 1 TB):</strong> sistema operativo, Docker, la base de datos de Jellyfin/Plex, los metadatos, las miniaturas y la carpeta temporal de transcodificación. Todo lo que se lee y escribe en pequeño y a menudo.</li>
+<li><strong>HDD (4 TB en adelante):</strong> la biblioteca de medios propiamente dicha: películas, series, música, fotos. Archivos grandes que se leen de forma secuencial, donde el HDD rinde de sobra.</li>
+</ul>
+<p>El efecto práctico: la interfaz de Jellyfin responde al instante, las búsquedas son inmediatas y la transcodificación no sufre, mientras el grueso de los terabytes se paga a precio de HDD. Un SSD SATA de 500 GB para sistema cuesta entre $30 y $50 (septiembre de 2026): la mejora más barata que puedes hacerle a tu servidor.</p>
+<p><a href="[ENLACE_AFILIADO_1]">Ver precio</a> de un SSD SATA de 500 GB–1 TB para el sistema y la caché.</p>
+<p><a href="[ENLACE_AFILIADO_2]">Ver precio</a> de un HDD CMR de 4–8 TB para la biblioteca de medios.</p>
+
+<h2>Cuándo SÍ compensa un SSD grande</h2>
+<p>Hay escenarios donde el HDD se queda corto y el SSD grande está justificado:</p>
+<ul>
+<li><strong>Silencio absoluto:</strong> si el servidor está en el dormitorio o en un salón donde se nota cada decibelio, un servidor 100 % SSD es inaudible. Es caro por TB, pero el silencio no tiene precio para algunos.</li>
+<li><strong>Muchas transcodificaciones simultáneas:</strong> la carpeta temporal de transcodificación sufre escrituras intensas; en SSD va más suelta, sobre todo con varios streams a la vez.</li>
+<li><strong>Bibliotecas con decenas de miles de archivos pequeños</strong> (música en FLAC, fotos): el acceso aleatorio del SSD acelera el escaneo y la navegación.</li>
+<li><strong>Servidor en mini PC o portátil</strong> sin bahías de 3,5": a veces el SSD es la única opción física razonable.</li>
+<li><strong>Bajo consumo extremo:</strong> en un servidor con batería/UPS pequeña o con energía solar, cada vatio cuenta y el SSD consume menos.</li>
+</ul>
+<p>En estos casos, un SSD de 2–4 TB para medios cuesta entre $100 y $300 (septiembre de 2026). Compensa si el silencio o la velocidad aleatoria son requisitos, no caprichos.</p>
+<p><a href="[ENLACE_AFILIADO_3]">Ver precio</a> de SSD de 2–4 TB si tu caso necesita silencio o velocidad.</p>
+
+<h2>Cuándo el HDD es imbatible</h2>
+<ul>
+<li><strong>Bibliotecas grandes (8 TB o más):</strong> el precio por TB del HDD es 3–4 veces menor. Llenar 12 TB en SSD cuesta una fortuna; en HDD es lo normal.</li>
+<li><strong>Archivo frío:</strong> copias de seguridad, series que ves una vez al año, fotos de archivo. Datos que se escriben una vez y se leen de vez en cuando.</li>
+<li><strong>NAS con RAID:</strong> los HDD CMR de gama NAS son el estándar para arrays domésticos (ver nuestra guía de discos para NAS).</li>
+</ul>
+
+<h2>El mito del desgaste del SSD</h2>
+<p>Mucha gente teme "gastar" el SSD con la transcodificación. Los SSD modernos tienen una resistencia de escritura (TBW) de cientos de terabytes: en uso doméstico normal, la comunidad de usuarios reporta que el desgaste por transcodificación es despreciable frente a la vida útil del disco. No es un motivo para evitar el SSD en la caché; sí es un motivo para no pagar de más por un SSD "pro" con TBW extremo que no vas a aprovechar.</p>
+
+<h2>Cómo elaboramos esta comparativa</h2>
+<p>Evaluamos cuatro criterios: <strong>precio por terabyte</strong>, <strong>rendimiento en los patrones de uso de un servidor de medios</strong> (lectura secuencial de archivos grandes frente a acceso aleatorio de bases de datos), <strong>ruido y consumo</strong> en funcionamiento 24/7, y <strong>resistencia y vida útil</strong> esperada. Las fuentes fueron las especificaciones oficiales de fabricantes de SSD y HDD, la documentación de Jellyfin y Plex sobre requisitos de almacenamiento y transcodificación, y el consenso de comunidades de usuarios de servidores caseros sobre arquitecturas típicas.</p>
+<p><strong>No realizamos pruebas físicas propias</strong>: no medimos velocidades, consumos ni niveles de ruido en nuestro laboratorio. Las cifras citadas provienen de especificaciones oficiales y documentación de los proyectos mencionados.</p>
+
+<h2>Veredicto por caso de uso</h2>
+<ul>
+<li><strong>Servidor de medios típico en casa:</strong> <strong>SSD pequeño para sistema + HDD grande para medios</strong>. La combinación ganadora en el 90 % de los casos.</li>
+<li><strong>Servidor en el dormitorio, silencio total:</strong> <strong>todo SSD</strong>, asumiendo el sobrecoste por TB.</li>
+<li><strong>Biblioteca de más de 8 TB:</strong> <strong>HDD CMR</strong> sin dudarlo; el SSD sale carísimo a esa escala.</li>
+<li><strong>Varias transcodificaciones simultáneas:</strong> SSD para sistema y carpeta temporal de transcodificación; HDD para el almacén.</li>
+<li><strong>NAS dedicado con RAID:</strong> <strong>HDD CMR de gama NAS</strong>; el SSD solo como caché en modelos que lo soporten.</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Un HDD es suficiente para ver películas en 4K?</h3>
+<p>Sí, de sobra. El 4K necesita unos 25–50 Mbps y un HDD moderno entrega más de 1.000 Mbps en lectura secuencial. Los problemas de reproducción en 4K casi siempre vienen de la transcodificación (CPU/GPU), no del disco.</p>
+<h3>¿Qué tamaño de SSD necesito para el sistema?</h3>
+<p>Con 250–500 GB tienes de sobra para el sistema operativo, Docker, la base de datos de medios y la caché de transcodificación en un hogar normal. Sube a 1 TB si gestionas bibliotecas muy grandes o muchos contenedores.</p>
+<h3>¿Puedo usar un SSD externo por USB para los medios?</h3>
+<p>Sí, y funciona bien para bibliotecas modestas: USB 3.0 da de sobra para varios streams. Para un servidor 24/7 serio, un disco interno (o un NAS) es más fiable a largo plazo que un externo colgando del puerto USB.</p>
+<h3>¿Merece la pena un NVMe frente a un SATA para el sistema del servidor?</h3>
+<p>En la práctica del día a día, apenas notarás la diferencia: ambos son órdenes de magnitud más rápidos que un HDD en acceso aleatorio. Elige NVMe si tu placa lo soporta y el precio es similar; si no, un SATA cumple perfectamente.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="02-mejores-discos-duros-nas.html">Los 5 mejores discos duros para NAS doméstico en 2026</a></li>
+<li><a href="09-jellyfin-netflix-casero.html">Monta tu propio Netflix casero con Jellyfin: hardware necesario</a></li>
+<li><a href="05-mejores-ups-home-lab.html">Las 5 mejores UPS para proteger tu home lab de apagones</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

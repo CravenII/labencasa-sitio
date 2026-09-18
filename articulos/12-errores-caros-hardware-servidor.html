@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 errores caros al comprar hardware para tu servidor</title>
+<meta name="description" content="Los 7 errores más caros al comprar hardware para tu servidor casero: discos SMR, fuentes insuficientes, consumo 24/7 y qué comprar en su lugar.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>7 errores caros al comprar hardware para tu servidor casero</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<p>Montar un servidor casero no es caro; lo caro es comprarlo dos veces. Estos son los siete errores que más dinero hacen perder a quienes empiezan, con el criterio técnico que hay detrás y qué comprar en su lugar. Ninguno requiere experiencia previa para evitarlo: solo saber que existen antes de pasar la tarjeta.</p>
+
+<h2>Error 1: Comprar discos SMR para RAID o NAS</h2>
+<p><strong>Por qué es un error:</strong> los discos con grabación magnética solapada (SMR) son más baratos por terabyte, pero su forma de escribir datos los hace muy lentos en escrituras sostenidas y problemáticos en configuraciones RAID o NAS, donde el sistema espera un comportamiento predecible del disco. El resultado, según reportan ampliamente usuarios y administradores, son reconstrucciones de RAID eternas, caídas del disco del arreglo y un rendimiento irregular justo cuando más lo necesitas. Muchos fabricantes no lo indican claramente en la ficha del producto, así que hay que comprobarlo antes de comprar.</p>
+<p><strong>Qué comprar en su lugar:</strong> discos CMR (grabación convencional), idealmente de las gamas diseñadas para NAS, que según las especificaciones del fabricante están pensados para funcionamiento 24/7 y entornos RAID. <a href="[ENLACE_AFILIADO_1]">Ver precio</a></p>
+
+<h2>Error 2: Usar una fuente genérica e insuficiente para la Raspberry Pi 5</h2>
+<p><strong>Por qué es un error:</strong> la Raspberry Pi 5, según las especificaciones oficiales, necesita una fuente de 5 V y 5 A para rendir al máximo, sobre todo si alimentas discos USB desde sus puertos. Con el cargador viejo del móvil que "parece que funciona", la Pi limita su rendimiento, se reinicia bajo carga o, peor, corrompe la tarjeta microSD a mitad de una escritura. Es el componente más barato del proyecto y la causa más común de problemas "misteriosos".</p>
+<p><strong>Qué comprar en su lugar:</strong> la fuente oficial de 27 W (5 V/5 A) o una fuente de terceros con esas mismas especificaciones certificadas. <a href="[ENLACE_AFILIADO_2]">Ver precio</a></p>
+
+<h2>Error 3: Ignorar el consumo eléctrico del 24/7</h2>
+<p><strong>Por qué es un error:</strong> un servidor casero está encendido todo el año. Un equipo que consume 60 W de forma continua gasta más de 500 kWh al año; a precios eléctricos típicos eso son decenas de dólares anuales, año tras año, que nadie presupuestó. Ese "servidor gratis" hecho con un PC viejo de sobremesa puede salir más caro en tres años de luz que un mini PC eficiente nuevo.</p>
+<p><strong>Qué comprar en su lugar:</strong> equipos diseñados para bajo consumo (mini PC de 10–15 W, Raspberry Pi de unos pocos vatios) y, si reutilizas hardware viejo, mide su consumo real con un medidor de enchufe antes de decidir. <a href="[ENLACE_AFILIADO_3]">Ver precio</a></p>
+
+<h2>Error 4: Sobredimensionar la CPU y olvidarse de la red</h2>
+<p><strong>Por qué es un error:</strong> para servir archivos, medios o una nube personal, el cuello de botella casi nunca es el procesador: es la red. Un equipo potentísimo conectado por WiFi inestable o a un switch de 100 Mbps rinde peor que un equipo modesto bien cableado a gigabit. El dinero puesto en CPU de más no se nota; el puesto en red sí.</p>
+<p><strong>Qué comprar en su lugar:</strong> un equipo de gama eficiente y un switch gigabit (o 2,5 GbE si tu cableado lo permite) con cableado decente. La red es la mejora con mejor retorno de todo el home lab. <a href="[ENLACE_AFILIADO_4]">Ver precio</a></p>
+
+<h2>Error 5: Conectar el servidor por WiFi en vez de por cable</h2>
+<p><strong>Por qué es un error:</strong> el WiFi comparte el medio con todos tus dispositivos, sufre interferencias de los vecinos y tiene latencia variable. Para navegar no importa; para un servidor que mueve gigabytes a diario significa transferencias lentas, copias de seguridad que no terminan nunca y streaming con microcortes. Y cuando algo falla, diagnosticar si es el WiFi o el servidor roba horas.</p>
+<p><strong>Qué comprar en su lugar:</strong> cable Ethernet hasta el router o switch, aunque sea un cable largo bien pasado. Si es imposible, un adaptador PLC o un punto de acceso dedicado, pero el cable siempre primero. <a href="[ENLACE_AFILIADO_5]">Ver precio</a></p>
+
+<h2>Error 6: No presupuestar una UPS desde el primer día</h2>
+<p><strong>Por qué es un error:</strong> un apagón a mitad de una escritura puede corromper el sistema de archivos o dejar una base de datos a medias, y los microcortes repetidos acortan la vida de los discos. La gente suele comprar la UPS "después", que en la práctica significa después del primer susto. Una UPS básica cuesta menos que un solo disco duro y protege todo el equipo.</p>
+<p><strong>Qué comprar en su lugar:</strong> una UPS/SAI de capacidad modesta (600–1000 VA bastan para un home lab pequeño) con conexión USB para apagado automático. <a href="[ENLACE_AFILIADO_6]">Ver precio</a></p>
+
+<h2>Error 7: Comprar sin plan de crecimiento (bahías y puertos)</h2>
+<p><strong>Por qué es un error:</strong> el home lab crece: hoy es un disco USB, mañana quieres un segundo disco en espejo y pasado un tercero para las copias. Si tu equipo base no tiene bahías, puertos USB suficientes o ranuras de expansión, cada ampliación significa comprar hardware nuevo en vez de añadir un disco. El coste de "empezar barato sin pensar" se paga en la primera ampliación.</p>
+<p><strong>Qué comprar en su lugar:</strong> un equipo o carcasa con al menos una bahía o puerto libre de más de los que necesitas hoy, y un switch con puertos de sobra. Planificar dos ampliaciones futuras no cuesta nada al comprar y ahorra mucho después. <a href="[ENLACE_AFILIADO_7]">Ver precio</a></p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cuál de estos errores es el más común entre principiantes?</h3>
+<p>La fuente de alimentación insuficiente y los discos SMR comprados sin comprobar la tecnología de grabación. Ambos comparten la misma raíz: fiarse del precio sin leer las especificaciones del fabricante.</p>
+<h3>¿De verdad hace falta una UPS en casa?</h3>
+<p>Si tu zona sufre cortes o microcortes con cierta frecuencia, sí: es el seguro más barato de tu home lab. Si tu suministro es muy estable, al menos considera una regleta con protección contra sobretensiones como mínimo.</p>
+<h3>¿Puedo empezar con hardware reutilizado para no gastar?</h3>
+<p>Sí, con dos comprobaciones: mide su consumo eléctrico real (un PC viejo puede gastar más en luz en dos años que un mini PC nuevo) y verifica el estado de sus discos antes de confiarles tus datos.</p>
+<h3>¿Cuánto debería presupuestar para un servidor casero decente?</h3>
+<p>Como orientación, entre $300 y $500 cubren un equipo eficiente, almacenamiento con redundancia básica y protección eléctrica mínima (septiembre de 2026). Por debajo se puede empezar, pero asumiendo compromisos en redundancia o en protección.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="06-servidor-casero-300-dolares.html">Monta tu primer servidor casero con $300: lista de compras completa</a></li>
+<li><a href="02-mejores-discos-duros-nas.html">Los 5 mejores discos duros para NAS doméstico en 2026</a></li>
+<li><a href="05-mejores-ups-home-lab.html">Las 5 mejores UPS para proteger tu home lab de apagones</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

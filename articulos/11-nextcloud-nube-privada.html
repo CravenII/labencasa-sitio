@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu nube privada por menos de $400: Nextcloud en casa</title>
+<meta name="description" content="Monta tu nube privada con Nextcloud por menos de $400: lista de materiales con redundancia, 3 decisiones antes de comprar y pasos del proyecto.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>Tu nube privada por menos de $400: Nextcloud en casa</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<h2>Qué vas a lograr</h2>
+<p>Tu propio servicio de almacenamiento en la nube, bajo tu techo y bajo tus reglas: sincronización de archivos entre el móvil, la tablet y el ordenador, copia automática de las fotos del teléfono, calendario y contactos sincronizados y la tranquilidad de que tus documentos no están en los servidores de nadie más. Sin cuotas mensuales y con el espacio que tú decidas. Este proyecto está en marcha en nuestro propio home lab.</p>
+<p>Nextcloud es la plataforma libre que lo hace posible: se instala en tu equipo y ofrece apps para cada dispositivo, con una interfaz web que recuerda a los servicios comerciales que ya conoces.</p>
+
+<h2>Lista de materiales</h2>
+<p>La gracia de este proyecto es que el hardware es modesto; donde hay que invertir es en los discos y en la protección eléctrica.</p>
+<table>
+<thead>
+<tr><th>Qué</th><th>Por qué lo necesitas</th><th>Precio orientativo (sep 2026)</th><th>Enlace</th></tr>
+</thead>
+<tbody>
+<tr><td>Equipo base: mini PC o Raspberry Pi 4/5</td><td>Ejecuta Nextcloud 24/7. Para una familia, un mini PC modesto o una Pi con 4–8 GB van sobrados.</td><td>Entre $80 y $220 según el equipo</td><td><a href="[ENLACE_AFILIADO_1]">Ver precio</a></td></tr>
+<tr><td>2 discos duros iguales (para espejo)</td><td>Configurados en espejo (RAID 1), si un disco muere el otro conserva todos tus datos. Es el corazón de la fiabilidad del proyecto.</td><td>Entre $90 y $200 la pareja, según capacidad</td><td><a href="[ENLACE_AFILIADO_2]">Ver precio</a></td></tr>
+<tr><td>Carcasa USB de doble bahía o base para discos</td><td>Para conectar los dos discos al equipo base de forma ordenada y con buena ventilación.</td><td>Entre $30 y $70</td><td><a href="[ENLACE_AFILIADO_3]">Ver precio</a></td></tr>
+<tr><td>UPS / SAI (recomendada, opcional)</td><td>Un corte de luz a mitad de escritura puede corromper datos. Una UPS pequeña da tiempo a apagar con seguridad.</td><td>Entre $60 y $130</td><td><a href="[ENLACE_AFILIADO_4]">Ver precio</a></td></tr>
+<tr><td>Cable Ethernet</td><td>La sincronización de gigabytes de fotos agradece una conexión por cable estable.</td><td>Entre $8 y $15</td><td><a href="[ENLACE_AFILIADO_5]">Ver precio</a></td></tr>
+</tbody>
+</table>
+<p>Con el equipo base más económico y dos discos de 4 TB en espejo, el total ronda los $300–$400 según las ofertas del momento, UPS incluida si optas por un modelo básico.</p>
+
+<h2>Antes de comprar: 3 decisiones</h2>
+
+<h3>1. Cuánto espacio real necesitas</h3>
+<p>Suma con realismo: documentos y archivos de trabajo suelen ocupar poco (decenas de GB), pero las fotos y vídeos del móvil crecen sin piedad —una familia puede generar más de 100 GB al año solo con el teléfono—. Si además quieres guardar copias de seguridad de otros equipos, calcula el doble.</p>
+<p>Para la mayoría de los hogares, dos discos de 4 TB en espejo (4 TB útiles) dan para años. Si ya sabes que tu biblioteca de fotos es enorme o planeas guardar vídeo, sube a 8 TB por disco: el sobrecoste por terabyte baja con la capacidad. Y recuerda que en espejo la capacidad útil es la de un solo disco.</p>
+
+<h3>2. Acceso desde fuera: VPN privada o exponer puertos</h3>
+<p>Querrás llegar a tus archivos desde fuera de casa, y aquí hay dos caminos con filosofías opuestas. Exponer Nextcloud directamente a internet (abriendo puertos en el router) es cómodo pero te convierte en objetivo de bots que escanean la red buscando servicios vulnerables: exige HTTPS, contraseñas robustas, actualizaciones al día y, mejor aún, autenticación en dos pasos.</p>
+<p>La alternativa recomendada para la mayoría es una VPN privada tipo Tailscale o WireGuard: solo tus dispositivos pueden ver tu nube, sin abrir nada al exterior. Es un paso más de configuración inicial a cambio de mucha más tranquilidad. Si no te apetece gestionar certificados y seguridad perimetral, la VPN es tu camino.</p>
+
+<h3>3. Copias de seguridad de la propia nube</h3>
+<p>El espejo de discos te protege si un disco muere, pero no de un borrado accidental, un ransomware o un incendio: eso no es una copia de seguridad, es redundancia. La regla clásica 3-2-1 sigue vigente: tres copias de tus datos, en dos soportes distintos, una de ellas fuera de casa.</p>
+<p>En la práctica: un disco externo donde vuelques la nube cada semana (y que desconectes después) más una copia cifrada de lo más crítico en un almacenamiento externo —puede ser un disco guardado en casa de un familiar o un servicio de almacenamiento barato— cubre casi todos los escenarios. Presupuesta ese disco externo desde el principio: una nube sin copia de seguridad es una falsa sensación de seguridad.</p>
+
+<h2>El proyecto paso a paso (resumen)</h2>
+<ol>
+<li><strong>Prepara el equipo base</strong> con un sistema operativo Linux y conecta los dos discos configurados en espejo para el almacenamiento de datos.</li>
+<li><strong>Despliega Nextcloud</strong> con Docker o con el método de instalación oficial que prefieras, apuntando el almacenamiento de datos a los discos en espejo.</li>
+<li><strong>Configura el acceso seguro:</strong> HTTPS con certificado y, según tu decisión anterior, VPN privada o acceso exterior endurecido con doble factor de autenticación.</li>
+<li><strong>Crea los usuarios de la familia</strong> y establece cuotas de almacenamiento por usuario para que nadie se coma el espacio de los demás sin darse cuenta.</li>
+<li><strong>Instala las apps cliente</strong> en móviles y ordenadores, activa la subida automática de fotos y comprueba que la sincronización funciona en ambas direcciones.</li>
+<li><strong>Programa las copias de seguridad</strong> desde el primer día: una tarea automática que vuelque los datos al disco externo de respaldo.</li>
+</ol>
+
+<h2>Alternativas por presupuesto</h2>
+<ul>
+<li><strong>Ajustado (menos de $250):</strong> Raspberry Pi con 4–8 GB de RAM, un solo disco externo grande y copias manuales periódicas a otro disco que ya tengas. Funciona, pero sin espejo: la copia de seguridad externa aquí es obligatoria, no opcional.</li>
+<li><strong>Equilibrado (menos de $400, la recomendación):</strong> mini PC eficiente o Pi 5, dos discos iguales en espejo y una UPS básica. Es el punto dulce entre coste, fiabilidad y tranquilidad.</li>
+<li><strong>Sin límite:</strong> pequeño servidor con 4 bahías, discos NAS específicos (CMR, no SMR), red de 2,5 GbE y UPS con gestión de apagado automático. Para quien quiere centralizar las copias de toda la familia y olvidarse del tema durante años.</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Nextcloud es realmente gratis?</h3>
+<p>Sí, Nextcloud es software libre y gratuito para uso personal. Solo pagas el hardware y la electricidad. Existe una versión empresarial de pago con soporte, que no necesitas en casa.</p>
+<h3>¿Puedo acceder a mis archivos desde el móvil fuera de casa?</h3>
+<p>Sí, con las apps oficiales de Nextcloud para Android e iOS. Si usas VPN privada, primero conectas la VPN y luego abres la app; si expones el servicio, la app conecta directamente (con las precauciones de seguridad mencionadas arriba).</p>
+<h3>¿Qué pasa si se va la luz?</h3>
+<p>Sin UPS, el equipo se apaga de golpe con riesgo de corrupción de datos. Con una UPS básica, el equipo aguanta los minutos necesarios para apagarse de forma ordenada, ya sea manualmente o de forma automática si la UPS lo soporta.</p>
+<h3>¿Es mejor que pagar Google Drive o iCloud?</h3>
+<p>Depende de lo que valores: los servicios comerciales son más cómodos y no requieren mantenimiento, pero pagas una cuota de por vida y tus datos están en manos ajenas. Tu nube privada sale más barata a partir del segundo o tercer año para capacidades medias-altas, y la privacidad es total. A cambio, el mantenimiento es cosa tuya.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="02-mejores-discos-duros-nas.html">Los 5 mejores discos duros para NAS doméstico en 2026</a></li>
+<li><a href="05-mejores-ups-home-lab.html">Las 5 mejores UPS para proteger tu home lab de apagones</a></li>
+<li><a href="06-servidor-casero-300-dolares.html">Monta tu primer servidor casero con $300: lista de compras completa</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

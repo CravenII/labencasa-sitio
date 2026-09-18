@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pi-hole en Raspberry Pi: adiós anuncios en casa</title>
+<meta name="description" content="Bloquea anuncios y rastreadores en toda tu red con Pi-hole en una Raspberry Pi: materiales mínimos, decisiones antes de comprar y límites honestos.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>Adiós anuncios en toda la casa: Pi-hole en Raspberry Pi</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<h2>Qué vas a lograr</h2>
+<p>Un bloqueador de anuncios y rastreadores que funciona a nivel de red: una vez instalado, filtra la publicidad de todos los dispositivos conectados a tu WiFi —móviles, tablets, ordenadores, Smart TV— sin instalar nada en cada uno. Las páginas cargan más rápido, gastas menos datos y reduces el rastreo publicitario de un plumazo. Este proyecto está en marcha en nuestro propio home lab.</p>
+<p>Pi-hole es software libre que actúa como servidor DNS de tu red: cuando un dispositivo pide la dirección de un dominio de publicidad o rastreo, Pi-hole simplemente no la resuelve. El anuncio nunca llega a descargarse.</p>
+
+<h2>Lista de materiales mínima</h2>
+<p>Pi-hole es famoso por funcionar en hardware muy modesto. Esto es todo lo que necesitas:</p>
+<table>
+<thead>
+<tr><th>Qué</th><th>Por qué lo necesitas</th><th>Precio orientativo (sep 2026)</th><th>Enlace</th></tr>
+</thead>
+<tbody>
+<tr><td>Raspberry Pi con conexión de red (cualquier modelo reciente)</td><td>Ejecuta Pi-hole 24/7 con un consumo mínimo. Vale desde una Pi Zero 2 W hasta una Pi 5.</td><td>Entre $15 y $90 según el modelo</td><td><a href="[ENLACE_AFILIADO_1]">Ver precio</a></td></tr>
+<tr><td>Tarjeta microSD (32 GB o más, clase A1/A2)</td><td>Almacena el sistema operativo y Pi-hole. Una tarjeta de calidad evita corrupciones.</td><td>Entre $8 y $20</td><td><a href="[ENLACE_AFILIADO_2]">Ver precio</a></td></tr>
+<tr><td>Fuente de alimentación adecuada al modelo</td><td>Una fuente insuficiente causa reinicios aleatorios justo cuando más la necesitas.</td><td>Entre $10 y $25</td><td><a href="[ENLACE_AFILIADO_3]">Ver precio</a></td></tr>
+<tr><td>Caja o carcasa (opcional pero recomendada)</td><td>Protege la placa del polvo y de toques accidentales.</td><td>Entre $8 y $18</td><td><a href="[ENLACE_AFILIADO_4]">Ver precio</a></td></tr>
+<tr><td>Cable Ethernet (recomendado)</td><td>Para conectar la Pi por cable al router: más estable que el WiFi para un servicio crítico.</td><td>Entre $8 y $15</td><td><a href="[ENLACE_AFILIADO_5]">Ver precio</a></td></tr>
+</tbody>
+</table>
+
+<h2>Antes de comprar</h2>
+
+<h3>Pi dedicada o compartida con otros servicios</h3>
+<p>Pi-hole puede convivir con otros servicios ligeros en la misma Raspberry Pi (un servidor de archivos pequeño, por ejemplo), y mucha gente lo hace sin problemas. Pero ten en cuenta una cosa: Pi-hole se convierte en el DNS de toda tu casa. Si esa Pi se reinicia por un experimento con otro servicio, toda la red se queda sin resolución de nombres hasta que vuelve.</p>
+<p><strong>Recomendación práctica:</strong> si es tu primer Pi-hole, dedícale una Pi barata en exclusiva (una Zero 2 W o una Pi 3/4 de segunda mano rinden de sobra). Cuando el servicio es crítico para toda la red, la estabilidad manda. Si más adelante quieres consolidar servicios, hazlo cuando ya tengas claro el mantenimiento.</p>
+
+<h3>Por qué la conexión cableada es preferible</h3>
+<p>Pi-hole responde a cada petición DNS de cada dispositivo de tu casa, decenas de veces por minuto. Por WiFi funciona, pero el cable elimina dos problemas de raíz: la latencia variable del WiFi y las desconexiones momentáneas que dejan a toda la red sin DNS durante unos segundos.</p>
+<p>Si tu router está lejos, un cable largo o un adaptador PLC es mejor inversión que una Pi más potente: para Pi-hole, la red estable importa más que la CPU. Dicho esto, si el cable es imposible, el WiFi es aceptable siempre que la señal sea buena y la Pi tenga IP fija.</p>
+
+<h2>El proyecto paso a paso (resumen)</h2>
+<ol>
+<li><strong>Prepara la Raspberry Pi</strong> con su sistema operativo y asígnale una dirección IP fija en tu red (en el router o en la propia Pi). Este paso es importante: si la IP del DNS cambia, todo deja de funcionar.</li>
+<li><strong>Instala Pi-hole</strong> siguiendo el método oficial del proyecto (instalador o contenedor Docker, según tu preferencia). El asistente de instalación te guía por las opciones básicas.</li>
+<li><strong>Apunta tu red al nuevo DNS:</strong> configura tu router para que reparta la IP de la Pi como servidor DNS a todos los dispositivos. Así no tienes que tocar cada móvil y ordenador uno por uno.</li>
+<li><strong>Ajusta las listas de bloqueo</strong> desde el panel web: las listas por defecto ya bloquean la mayoría de la publicidad; puedes añadir listas adicionales según tus necesidades.</li>
+<li><strong>Revisa y afina:</strong> si alguna página legítima falla, el registro de consultas del panel te muestra qué dominio se bloqueó para ponerlo en la lista blanca.</li>
+</ol>
+
+<h2>Qué esperar (y qué no)</h2>
+<p>Seamos honestos sobre los límites, porque un Pi-hole bien entendido da muchas más alegrías que uno con expectativas irreales.</p>
+<ul>
+<li><strong>Sí bloquea:</strong> banners y ventanas de publicidad en páginas web, rastreadores de analítica y publicidad, y muchos anuncios en apps móviles que se sirven desde dominios dedicados. La navegación se nota más rápida y ligera.</li>
+<li><strong>No bloquea los anuncios integrados de YouTube:</strong> YouTube sirve sus anuncios desde los mismos dominios que los vídeos, así que el bloqueo por DNS no puede distinguirlos. Para eso sigue haciendo falta un bloqueador en el navegador.</li>
+<li><strong>No sustituye a un antivirus</strong> ni te protege de phishing, malware o páginas fraudulentas por sí solo. Es una capa de privacidad y comodidad, no una solución de seguridad completa.</li>
+<li><strong>Algunas páginas se pueden romper:</strong> sitios que dependen de dominios de terceros para funcionar (reproductores de vídeo, sistemas de comentarios) a veces fallan. La solución es poner ese dominio en la lista blanca desde el panel, un proceso de un minuto.</li>
+<li><strong>No filtra el tráfico fuera de tu red</strong> salvo que configures VPN para usar tu Pi-hole desde el móvil cuando estás fuera de casa, algo posible pero que requiere un paso adicional.</li>
+</ul>
+<p>Con esas expectativas claras, Pi-hole es uno de los proyectos con mejor relación esfuerzo-beneficio de todo el home lab: una tarde de instalación a cambio de años de navegación más limpia en todos tus dispositivos.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Pi-hole ralentiza mi internet?</h3>
+<p>No de forma perceptible. Las respuestas DNS se sirven en milisegundos desde tu red local, y al no descargar los anuncios las páginas suelen cargar más rápido que antes.</p>
+<h3>¿Funciona con cualquier router?</h3>
+<p>En la mayoría sí: basta con poder cambiar el servidor DNS que el router reparte por DHCP. Algunos routers de operadora lo tienen capado; en ese caso puedes configurar el DNS dispositivo por dispositivo o poner tu propio router detrás del de la operadora.</p>
+<h3>¿Necesito una Raspberry Pi 5?</h3>
+<p>No. Pi-hole consume muy pocos recursos y funciona bien incluso en modelos modestos. Invierte la diferencia en una buena tarjeta microSD y una fuente decente, que es donde realmente se juega la fiabilidad.</p>
+<h3>¿Bloquea anuncios en el móvil fuera de casa?</h3>
+<p>Solo si tu móvil usa tu Pi-hole como DNS también fuera de casa, lo que requiere configurar una VPN hacia tu red doméstica. Dentro de casa funciona automáticamente para todos los dispositivos conectados a tu WiFi.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="08-guia-raspberry-pi-5-que-comprar.html">Guía de compra: Raspberry Pi 5 — RAM, fuente y caja</a></li>
+<li><a href="07-kit-esencial-red-domestica.html">Kit esencial de red doméstica 2026: lo que sí vale la pena</a></li>
+<li><a href="03-wifi-mesh-vs-router-repetidor.html">WiFi mesh vs. router potente + repetidor: qué comprar según tu casa</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

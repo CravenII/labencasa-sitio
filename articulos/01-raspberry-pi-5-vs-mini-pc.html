@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raspberry Pi 5 vs mini PC: cuál conviene para tu home lab</title>
+<meta name="description" content="Raspberry Pi 5 o mini PC barato: comparamos consumo, potencia, precio total y casos de uso para elegir el corazón de tu home lab.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="nav">
+    <a class="logo" href="../index.html">Home Lab <span>ES</span></a>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#articulos">Artículos</a>
+      <a href="../sobre-nosotros.html">Sobre nosotros</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<article>
+<div class="disclosure">🔗 <em>Divulgación: esta página contiene enlaces de afiliado. Si compras a través de ellos, podemos recibir una comisión sin costo adicional para ti. Esto nos ayuda a mantener el contenido gratuito. <a href="../divulgacion.html">Ver política completa</a>.</em></div>
+<h1>Raspberry Pi 5 vs. mini PC barato: qué conviene para tu home lab en 2026</h1>
+<p class="meta">Publicado el 17 de septiembre de 2026 · Actualizado el 17 de septiembre de 2026</p>
+
+<p>Cuando montas tu primer servidor casero, casi siempre llegas a la misma encrucijada: ¿una <strong>Raspberry Pi 5</strong> o un <strong>mini PC barato</strong> con procesador x86? Ambas opciones caben en la palma de la mano, ambas pueden correr Docker y ambas son capaces de sostener un home lab serio. Pero no son intercambiables: cada una brilla en un tipo de trabajo y flojea en el otro.</p>
+
+<p>En esta comparativa ponemos sobre la mesa las fichas técnicas, los costes reales (incluyendo accesorios, que casi nadie cuenta) y los casos de uso típicos, para que decidas con criterio y no con impulso.</p>
+
+<h2>Resumen rápido: cada uno en su terreno</h2>
+<ul>
+<li><strong>Elige la Raspberry Pi 5</strong> si tu prioridad es un servidor silencioso y de consumo mínimo, encendido 24/7 para Pi-hole, Nextcloud ligero, Home Assistant o un pequeño media server sin transcodificación pesada.</li>
+<li><strong>Elige el mini PC</strong> si necesitas potencia x86 real: virtualización con Proxmox, transcodificación de video en Jellyfin, varios contenedores exigentes a la vez o discos NVMe rápidos sin cuellos de botella.</li>
+</ul>
+
+<h2>Comparativa lado a lado</h2>
+<table>
+<thead>
+<tr><th>Criterio</th><th>Raspberry Pi 5</th><th>Mini PC barato (p. ej. N100/N150)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Precio del equipo (sin accesorios)</strong></td><td>Entre $60 y $100 según la RAM (septiembre de 2026)</td><td>Entre $130 y $220 según RAM y SSD incluidos (septiembre de 2026)</td></tr>
+<tr><td><strong>Precio total con accesorios</strong></td><td>Suma fuente oficial, caja con ventilación y microSD o SSD: entre $110 y $160</td><td>Suele venir listo para usar; puede necesitar ampliación de RAM/SSD: entre $130 y $260</td></tr>
+<tr><td><strong>CPU</strong></td><td>Broadcom BCM2712, 4 núcleos ARM Cortex-A76 a 2,4 GHz</td><td>Intel N100 / N150, 4 núcleos x86 a 3,4 GHz con turbo</td></tr>
+<tr><td><strong>RAM</strong></td><td>4, 8 o 16 GB LPDDR4X (fija, no ampliable)</td><td>Normalmente 8 o 16 GB DDR4/DDR5, ampliable en muchos modelos</td></tr>
+<tr><td><strong>Consumo típico</strong></td><td>Muy bajo: del orden de 2–10 W según la carga, según las especificaciones del fabricante</td><td>Bajo, pero mayor: del orden de 6–25 W según la carga, según las especificaciones del fabricante</td></tr>
+<tr><td><strong>Ruido</strong></td><td>Silenciosa; con disipador pasivo decente puede funcionar sin ventilador</td><td>Generalmente silenciosa en reposo; algunos modelos activan ventilador bajo carga</td></tr>
+<tr><td><strong>Red</strong></td><td>Ethernet Gigabit + WiFi 5 en la placa</td><td>Normalmente Ethernet 2,5 Gb + WiFi 6 en la mayoría de modelos</td></tr>
+<tr><td><strong>Almacenamiento</strong></td><td>microSD de serie; PCIe para NVMe mediante HAT (accesorio aparte)</td><td>M.2 NVMe de serie, más bahía o slot para segundo disco en muchos casos</td></tr>
+<tr><td><strong>Compatibilidad de software</strong></td><td>ARM: casi todo el ecosistema open source funciona, pero algunas imágenes Docker solo existen en x86</td><td>x86_64: compatibilidad prácticamente total, incluido Proxmox y Windows</td></tr>
+</tbody>
+</table>
+
+<h2>Consumo 24/7: el coste que nadie calcula</h2>
+<p>Un servidor casero está encendido todo el año, así que el consumo importa. La Raspberry Pi 5 consume poquísimo: en reposo ronda unos pocos vatios y a plena carga se mantiene por debajo de los 10–12 W, según las especificaciones del fabricante. Un mini PC con Intel N100 consume más en reposo (unos 6–10 W) y puede subir a 20–35 W bajo carga intensa.</p>
+<p>La diferencia en la factura eléctrica es modesta en términos absolutos —hablamos de unos pocos euros o dólares al mes—, pero suma a lo largo de los años y es parte del argumento de la Pi. Si buscas el equipo más eficiente posible para tareas ligeras siempre encendidas, la Pi gana sin discusión.</p>
+
+<h2>¿Cuándo elegir la Raspberry Pi 5?</h2>
+<p>La Pi 5 es la opción ideal para <strong>servicios ligeros siempre activos</strong>: Pi-hole o AdGuard para bloquear publicidad en toda la casa, un servidor DNS, Home Assistant, un bróker MQTT, una pequeña instancia de Nextcloud para la familia, un seedbox ligero o un servidor de impresión. También rinde bien como media server con Jellyfin si tus dispositivos reproducen el contenido <em>directamente</em>, sin transcodificación.</p>
+<p>Además, su comunidad es enorme: encontrarás tutoriales, imágenes oficiales y soporte para casi cualquier proyecto de Raspberry Pi. Y con un precio total entre $110 y $160 con accesorios (septiembre de 2026), es la puerta de entrada más barata al mundo del home lab.</p>
+<p><a href="[ENLACE_AFILIADO_1]">Ver precio</a> de la Raspberry Pi 5 (modelo de 8 GB, el más equilibrado para empezar).</p>
+
+<h2>¿Cuándo elegir un mini PC?</h2>
+<p>El mini PC es claramente superior cuando necesitas <strong>potencia de verdad</strong>. Los procesadores Intel N100/N150 ofrecen un rendimiento por vatio excelente en x86 y, lo más importante, traen <strong>Quick Sync</strong>, el motor de transcodificación por hardware de Intel: un Jellyfin que transcodifica 4K en un N100 deja en evidencia a cualquier Pi. También son la plataforma natural para <strong>Proxmox</strong> y máquinas virtuales, algo que en ARM es mucho más limitado.</p>
+<p>Otras ventajas prácticas: Ethernet de 2,5 Gb (ideal si tu red ya es multigigabit), slots NVMe de serie, RAM ampliable y compatibilidad total con cualquier software x86_64, incluidas imágenes Docker que no existen para ARM. El precio es mayor —entre $130 y $220 listo para usar (septiembre de 2026)—, pero obtienes un equipo completo sin necesidad de comprar fuente, caja ni adaptadores aparte.</p>
+<p><a href="[ENLACE_AFILIADO_2]">Ver precio</a> de un mini PC con Intel N100 y 16 GB de RAM, una configuración muy popular para home lab.</p>
+
+<h2>El coste total: el truco de la comparativa</h2>
+<p>Comparar solo el precio de la placa es engañoso. La Raspberry Pi 5 <em>necesita</em> accesorios para funcionar bien: fuente de alimentación oficial de 27 W, caja con buena ventilación (o disipador), y una microSD de calidad o, mejor, un SSD NVMe con HAT PCIe si quieres fiabilidad de verdad. El conjunto realista queda entre $110 y $160 (septiembre de 2026).</p>
+<p>El mini PC, en cambio, llega con fuente, caja, RAM y SSD incluidos. Cuando sumas todo, la diferencia de precio entre ambas opciones se estrecha mucho. La decisión debería basarse en el <strong>caso de uso</strong>, no solo en el ticket de compra.</p>
+
+<h2>Cómo elaboramos esta comparativa</h2>
+<p>Evaluamos cinco criterios: <strong>consumo eléctrico en funcionamiento 24/7</strong>, <strong>ruido</strong>, <strong>potencia de cómputo</strong> (CPU, transcodificación, virtualización), <strong>precio total con accesorios</strong> y <strong>comunidad y soporte de software</strong>. Las fuentes fueron las especificaciones oficiales publicadas por los fabricantes (Broadcom/Raspberry Pi e Intel), la documentación de proyectos como Jellyfin y Proxmox sobre requisitos de hardware, y el consenso de comunidades de usuarios de home lab sobre qué configuraciones funcionan bien en la práctica.</p>
+<p><strong>No realizamos pruebas físicas propias</strong>: no medimos consumos, temperaturas ni rendimientos en nuestro laboratorio. Las cifras de consumo citadas provienen de las hojas de especificaciones de los fabricantes y deben tomarse como valores orientativos, no como mediciones.</p>
+
+<h2>Veredicto por caso de uso</h2>
+<ul>
+<li><strong>Servidor silencioso 24/7 de tareas ligeras</strong> (Pi-hole, DNS, Home Assistant, automatizaciones): <strong>Raspberry Pi 5</strong>. Consumo mínimo, cero ruido y precio de entrada bajo.</li>
+<li><strong>Media server con transcodificación</strong> (Jellyfin/Plex convirtiendo 4K sobre la marcha): <strong>mini PC</strong>. Quick Sync marca la diferencia.</li>
+<li><strong>Virtualización con Proxmox</strong>: <strong>mini PC</strong>. x86, más RAM ampliable y NVMe de serie.</li>
+<li><strong>Primer home lab con presupuesto ajustado</strong>: <strong>Raspberry Pi 5</strong>, siempre que tus servicios sean ligeros y compatibles con ARM.</li>
+<li><strong>NAS casero con varios discos</strong>: ninguno de los dos es ideal; un mini PC con bahías o un NAS dedicado encajan mejor (ver nuestra guía de discos para NAS).</li>
+</ul>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿La Raspberry Pi 5 puede con Jellyfin?</h3>
+<p>Sí, siempre que tus dispositivos reproduzcan el contenido sin transcodificación (reproducción directa). Si necesitas convertir video sobre la marcha, especialmente 4K, un mini PC con Intel Quick Sync rinde mucho mejor, según la documentación de Jellyfin.</p>
+<h3>¿Puedo instalar Proxmox en una Raspberry Pi 5?</h3>
+<p>Proxmox VE es una plataforma x86_64 y no tiene soporte oficial para ARM. Existen proyectos comunitarios de virtualización en ARM, pero si la virtualización es tu objetivo, un mini PC es la opción sensata.</p>
+<h3>¿Cuánta RAM necesito en la Raspberry Pi 5?</h3>
+<p>Para servicios ligeros (Pi-hole, DNS, automatizaciones), el modelo de 4 GB basta. Si vas a correr varios contenedores Docker o un Nextcloud con varios usuarios, el modelo de 8 GB es el punto dulce. El de 16 GB solo compensa para cargas muy concretas.</p>
+<h3>¿El mini PC consume mucho más que la Pi estando siempre encendido?</h3>
+<p>Más, pero no dramáticamente: según las especificaciones, un N100 en reposo consume del orden de 6–10 W frente a los 2–4 W de la Pi en reposo. En la factura anual la diferencia suele ser de unas pocas decenas de euros o dólares, dependiendo de tu tarifa eléctrica.</p>
+
+<p class="nota-precios"><em>Rangos de precio orientativos, verificados en septiembre de 2026. Los precios y la disponibilidad pueden cambiar.</em></p>
+</article>
+<section class="relacionados">
+<h2>Artículos relacionados</h2>
+<ul>
+<li><a href="08-guia-raspberry-pi-5-que-comprar.html">Guía de compra: Raspberry Pi 5 — RAM, fuente y caja</a></li>
+<li><a href="06-servidor-casero-300-dolares.html">Monta tu primer servidor casero con $300: lista de compras completa</a></li>
+<li><a href="09-jellyfin-netflix-casero.html">Monta tu propio Netflix casero con Jellyfin: hardware necesario</a></li>
+</ul>
+</section>
+</main>
+<footer class="site">
+  <div class="container">
+    <p>© 2026 Home Lab ES · Guías honestas de hardware para tu servidor casero.</p>
+    <p><a href="../divulgacion.html">Divulgación de afiliados</a> · <a href="../privacidad.html">Privacidad</a> · <a href="../sobre-nosotros.html">Sobre nosotros</a> · Contacto: <a href="mailto:contacto@labencasa.com">contacto@labencasa.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
