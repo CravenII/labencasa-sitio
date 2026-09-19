@@ -1,5 +1,21 @@
 # Notas — sitio de afiliados "Home Lab ES"
-Estado: completo y verificado el 17-sep-2026. NO publicado.
+Estado: completo y verificado el 17-sep-2026. Cambios pre-difusión aplicados el 19-sep-2026. NO publicado.
+
+## Cambios del 19-sep-2026 (pre-difusión, sin gasto, sin cuentas)
+- **Placeholders desactivados**: los 68 `[ENLACE_AFILIADO_N]` de los 12 artículos son ahora
+  `<span class="enlace-pendiente">` neutros: no son clicables, no parecen afiliados y llevan
+  un tooltip que dice que aún no hay enlaces comerciales. Estilo nuevo en `style.css`.
+- **Transparencia honesta**: la caja de divulgación de los 12 artículos y `divulgacion.html`
+  dicen ahora claramente que el sitio **aún no tiene enlaces comerciales activos**; la política
+  describe lo que se hará cuando se activen (conforme a guías FTC).
+- **Contacto → Messenger**: se eliminó `mailto:contacto@labencasa.com` de las 16 páginas
+  (decisión del 17-sep superada por instrucción del 19-sep). El contacto público es ahora
+  https://www.facebook.com/verafueradelchat. Cero teléfonos, cero correos personales.
+- **Textos ajustados**: tarjeta "Transparencia total" en `index.html`, viñeta económica en
+  `sobre-nosotros.html` y párrafo de cookies en `privacidad.html`, todo en coherencia con
+  el estado "sin enlaces comerciales aún".
+- **README.md** añadido al repo (sin datos personales, sin placeholders). Licencia pendiente
+  de decisión del responsable.
 
 ## Qué es
 Sitio estático (HTML+CSS puros, sin build step) en `files/sitio-afiliados/`:
