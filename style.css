@@ -50,3 +50,6 @@ footer.site .container p{margin:.4rem 0}
   header.site nav a{margin-left:.8rem;font-size:.88rem}
   .nav{flex-wrap:wrap;gap:.5rem}
 }
+.foto-producto{margin:1.8rem auto;max-width:640px}
+.foto-producto img{max-width:100%;height:auto;display:block;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.foto-producto figcaption{font-size:.8rem;color:var(--muted);margin-top:.5rem;line-height:1.4}
