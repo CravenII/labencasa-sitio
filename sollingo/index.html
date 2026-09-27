@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SolLingo</title>
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SolLingo">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0b2239">
+<meta name="description" content="SolLingo: inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="stat" title="Puntos de experiencia">⭐ <span id="xpVal">0</span> XP</div>
+    <div class="stat" title="Lecciones completadas">✓ <span id="doneVal">0</span>/4</div>
+    <button class="iconbtn" id="muteBtn" aria-label="Activar o silenciar sonidos">🔊</button>
+  </header>
+
+  <section id="screen-home" class="screen">
+    <div class="hero">
+      <img src="sol.webp" alt="Sol, el solecito de SolLingo" class="hero-sun">
+      <h1>¡Hoy vas a sorprenderte, Nelly!</h1>
+      <p class="subtitle">Inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.</p>
+    </div>
+    <h2>Elige tu aventura</h2>
+    <p class="section-sub">Cuatro situaciones, veintiséis frases de verdad</p>
+    <div id="lessonList" class="lesson-list"></div>
+    <p class="footer-note">Hecho con ☀️ para Nelly · Sin anuncios · Sin pagos · Gratis siempre</p>
+  </section>
+
+  <section id="screen-lesson" class="screen hidden">
+    <div class="lesson-top">
+      <button class="iconbtn" id="quitBtn" aria-label="Salir de la lección">✕</button>
+      <div class="progress" aria-label="Progreso de la lección"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div id="exercise"></div>
+  </section>
+
+  <section id="screen-win" class="screen hidden">
+    <div class="hero">
+      <img src="sol.webp" alt="Sol celebra contigo" class="hero-sun win-sun">
+      <h1>¡Felicidades, Nelly!</h1>
+      <p class="subtitle" id="winText">¡Completaste la lección!</p>
+      <div class="xp-badge" id="winXp">+0 XP</div>
+      <div class="btnrow">
+        <button class="btn primary" id="againBtn">Repetir</button>
+        <button class="btn" id="homeBtn">Otra aventura</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="feedback" class="feedback hidden">
+    <div class="feedback-card" id="feedbackCard">
+      <div class="feedback-title" id="feedbackTitle"></div>
+      <div class="feedback-sub" id="feedbackSub"></div>
+      <button class="btn primary" id="continueBtn">Continuar</button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
