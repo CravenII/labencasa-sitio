@@ -12,26 +12,39 @@
 <meta name="theme-color" content="#0b2239">
 <meta name="description" content="SolLingo: inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 <div id="app">
   <header class="topbar">
     <div class="stat" title="Puntos de experiencia">⭐ <span id="xpVal">0</span> XP</div>
-    <div class="stat" title="Lecciones completadas">✓ <span id="doneVal">0</span>/4</div>
+    <div class="stat" title="Lecciones completadas">✓ <span id="doneVal">0</span>/<span id="doneTotal">8</span></div>
+    <button class="iconbtn" id="profileBtn" aria-label="Cambiar de persona" title="Cambiar de persona">⇄</button>
     <button class="iconbtn" id="muteBtn" aria-label="Activar o silenciar sonidos">🔊</button>
   </header>
+
+  <section id="screen-profile" class="screen">
+    <div class="hero">
+      <img src="sol.webp" alt="Sol, el solecito de SolLingo" class="hero-sun">
+      <h1>¿Quién eres?</h1>
+      <p class="subtitle">Elige tu nombre para empezar tu aventura</p>
+    </div>
+    <div class="profile-list">
+      <button class="profile-card" data-profile="nelly"><span class="profile-emoji">☀️</span><span class="profile-name">Nelly</span></button>
+      <button class="profile-card" data-profile="mirella"><span class="profile-emoji">🌸</span><span class="profile-name">Mirella</span></button>
+    </div>
+  </section>
 
   <section id="screen-home" class="screen">
     <div class="hero">
       <img src="sol.webp" alt="Sol, el solecito de SolLingo" class="hero-sun">
-      <h1>¡Hoy vas a sorprenderte, Nelly!</h1>
+      <h1 id="heroTitle">¡Hoy vas a sorprenderte, Nelly!</h1>
       <p class="subtitle">Inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.</p>
     </div>
     <h2>Elige tu aventura</h2>
-    <p class="section-sub">Cuatro situaciones, veintiséis frases de verdad</p>
+    <p class="section-sub">Ocho situaciones, cincuenta frases de verdad</p>
     <div id="lessonList" class="lesson-list"></div>
-    <p class="footer-note">Hecho con ☀️ para Nelly · Sin anuncios · Sin pagos · Gratis siempre</p>
+    <p class="footer-note">Hecho con ☀️ para ti · Sin anuncios · Sin pagos · Gratis siempre</p>
   </section>
 
   <section id="screen-lesson" class="screen hidden">
@@ -45,7 +58,7 @@
   <section id="screen-win" class="screen hidden">
     <div class="hero">
       <img src="sol.webp" alt="Sol celebra contigo" class="hero-sun win-sun">
-      <h1>¡Felicidades, Nelly!</h1>
+      <h1 id="winTitle">¡Felicidades, Nelly!</h1>
       <p class="subtitle" id="winText">¡Completaste la lección!</p>
       <div class="xp-badge" id="winXp">+0 XP</div>
       <div class="btnrow">
@@ -63,6 +76,6 @@
     </div>
   </div>
 </div>
-<script src="app.js"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>

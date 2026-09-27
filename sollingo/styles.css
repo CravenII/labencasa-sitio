@@ -412,3 +412,27 @@ h2 {
   .ex-prompt { font-size: 23px; }
   .option { font-size: 17px; }
 }
+
+/* ---------- Perfiles ---------- */
+.profile-list { display: flex; flex-direction: column; gap: 12px; }
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  width: 100%;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
+.profile-card:active { transform: scale(0.98); }
+
+.profile-emoji { font-size: 42px; flex: 0 0 auto; }
+
+.profile-name { font-size: 26px; font-weight: 800; }

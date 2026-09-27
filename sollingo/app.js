@@ -57,25 +57,77 @@
         ['Vamos a dar un paseo', "Let's go for a walk"],
         ['Qué bonito atardecer', 'What a beautiful sunset']
       ]
+    },
+    {
+      id: 'l5', num: '05',
+      title: 'De compras',
+      desc: 'En la tienda',
+      phrases: [
+        ['¿Tienen una talla más grande?', 'Do you have a bigger size?'],
+        ['Solo estoy mirando, gracias', "I'm just looking, thanks"],
+        ['¿Dónde está la caja?', 'Where is the checkout?'],
+        ['Me lo llevo', "I'll take it"],
+        ['¿Tienen descuento hoy?', 'Do you have a discount today?'],
+        ['Busco un regalo para mi hija', "I'm looking for a gift for my daughter"]
+      ]
+    },
+    {
+      id: 'l6', num: '06',
+      title: 'Cuídate mucho',
+      desc: 'Salud y farmacia',
+      phrases: [
+        ['Necesito una cita', 'I need an appointment'],
+        ['Me duele la cabeza', 'My head hurts'],
+        ['Tengo fiebre', 'I have a fever'],
+        ['Soy alérgica a este medicamento', "I'm allergic to this medicine"],
+        ['¿Cada cuántas horas?', 'Every how many hours?'],
+        ['Necesito ver a un doctor', 'I need to see a doctor']
+      ]
+    },
+    {
+      id: 'l7', num: '07',
+      title: 'Buen viaje',
+      desc: 'Viajes',
+      phrases: [
+        ['¿Dónde está la salida?', 'Where is the exit?'],
+        ['Mi vuelo se retrasó', 'My flight is delayed'],
+        ['¿Hay wifi aquí?', 'Is there wifi here?'],
+        ['¿A qué hora es el desayuno?', 'What time is breakfast?'],
+        ['La habitación no está lista', 'The room is not ready'],
+        ['Una noche más, por favor', 'One more night, please']
+      ]
+    },
+    {
+      id: 'l8', num: '08',
+      title: 'Vecinos y amigos',
+      desc: 'Vida social',
+      phrases: [
+        ['¿Me puede ayudar, por favor?', 'Can you help me, please?'],
+        ['Perdón por el ruido', 'Sorry for the noise'],
+        ['Bienvenidos a nuestra casa', 'Welcome to our home'],
+        ['¿Viene mañana a cenar?', 'Are you coming for dinner tomorrow?'],
+        ['Muchas gracias por todo', 'Thank you so much for everything'],
+        ['Nos vemos pronto', 'See you soon']
+      ]
     }
   ];
 
   var PRAISE = [
-    '¡Excelente, Nelly!',
-    '¡Muy bien, Nelly!',
+    '¡Excelente, {N}!',
+    '¡Muy bien, {N}!',
     '¡Increíble! ¡Sigue así!',
-    '¡Vas muy bien, Nelly!',
-    '¡Qué orgullo, Nelly!',
-    '¡Perfecto, Nelly!'
+    '¡Vas muy bien, {N}!',
+    '¡Qué orgullo, {N}!',
+    '¡Perfecto, {N}!'
   ];
 
   var COMFORT = [
-    'Casi, casi... ¡tú puedes, Nelly!',
+    'Casi, casi... ¡tú puedes, {N}!',
     'No pasa nada, inténtalo otra vez',
     'Vas bien, fíjate otra vez'
   ];
 
-  var WIN_PHRASE = '¡Felicidades, Nelly! ¡Completaste la lección!';
+  var WIN_PHRASE = '¡Felicidades, {N}! ¡Completaste la lección!';
 
   /* ==================== Utilidades ==================== */
   function shuffle(a) {
@@ -104,8 +156,37 @@
       try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* la app sigue funcionando */ }
     }
   };
-  var xp = store.get('sollingo_xp', 0);
-  var doneIds = store.get('sollingo_done', []);
+  var PROFILES = { nelly: 'Nelly', mirella: 'Mirella' };
+
+  /* Migración: el avance antiguo (sin perfil) pasa a Nelly */
+  (function migrateLegacy() {
+    var nellyXp = null, nellyDone = null, oldXp = null, oldDone = null;
+    try {
+      nellyXp = localStorage.getItem('sollingo_nelly_xp');
+      nellyDone = localStorage.getItem('sollingo_nelly_done');
+      oldXp = localStorage.getItem('sollingo_xp');
+      oldDone = localStorage.getItem('sollingo_done');
+    } catch (e) { return; }
+    try {
+      var moved = false;
+      if (nellyXp === null && oldXp !== null) { localStorage.setItem('sollingo_nelly_xp', oldXp); moved = true; }
+      if (nellyDone === null && oldDone !== null) { localStorage.setItem('sollingo_nelly_done', oldDone); moved = true; }
+      if (moved) {
+        localStorage.removeItem('sollingo_xp');
+        localStorage.removeItem('sollingo_done');
+      }
+    } catch (e) { /* la app sigue funcionando */ }
+  })();
+
+  var profile = store.get('sollingo_profile', null);
+  if (!profile || !PROFILES[profile]) profile = null;
+  function xpKey() { return 'sollingo_' + profile + '_xp'; }
+  function doneKey() { return 'sollingo_' + profile + '_done'; }
+  function profName() { return PROFILES[profile] || 'Nelly'; }
+  function tname(s) { return s.split('{N}').join(profName()); }
+
+  var xp = profile ? store.get(xpKey(), 0) : 0;
+  var doneIds = profile ? store.get(doneKey(), []) : [];
   var muted = store.get('sollingo_muted', false);
 
   /* ==================== Sonidos (Web Audio, sin archivos) ==================== */
@@ -201,13 +282,16 @@
 
   /* ==================== DOM ==================== */
   var $ = function (id) { return document.getElementById(id); };
-  var xpVal = $('xpVal'), doneVal = $('doneVal'), muteBtn = $('muteBtn');
-  var screenHome = $('screen-home'), screenLesson = $('screen-lesson'), screenWin = $('screen-win');
+  var xpVal = $('xpVal'), doneVal = $('doneVal'), doneTotal = $('doneTotal');
+  var muteBtn = $('muteBtn'), profileBtn = $('profileBtn');
+  var heroTitle = $('heroTitle'), winTitle = $('winTitle');
+  var screenProfile = $('screen-profile'), screenHome = $('screen-home'), screenLesson = $('screen-lesson'), screenWin = $('screen-win');
   var lessonList = $('lessonList'), exerciseBox = $('exercise'), progressFill = $('progressFill');
   var feedback = $('feedback'), feedbackCard = $('feedbackCard');
   var feedbackTitle = $('feedbackTitle'), feedbackSub = $('feedbackSub');
 
   function showScreen(name) {
+    screenProfile.classList.toggle('hidden', name !== 'profile');
     screenHome.classList.toggle('hidden', name !== 'home');
     screenLesson.classList.toggle('hidden', name !== 'lesson');
     screenWin.classList.toggle('hidden', name !== 'win');
@@ -216,6 +300,7 @@
 
   function refreshHeader() {
     xpVal.textContent = xp;
+    doneTotal.textContent = LESSONS.length;
     var n = 0;
     for (var i = 0; i < LESSONS.length; i++) {
       if (doneIds.indexOf(LESSONS[i].id) >= 0) n++;
@@ -226,6 +311,7 @@
 
   /* ==================== Inicio ==================== */
   function renderHome() {
+    heroTitle.textContent = '¡Hoy vas a sorprenderte, ' + profName() + '!';
     var html = '';
     for (var i = 0; i < LESSONS.length; i++) {
       var l = LESSONS[i];
@@ -511,16 +597,16 @@
     if (ok) {
       S.xpGain += 10;
       xp += 10;
-      store.set('sollingo_xp', xp);
+      store.set(xpKey(), xp);
       refreshHeader();
       sfxCorrect();
-      speak(choice(PRAISE), 'es');
+      speak(tname(choice(PRAISE)), 'es');
       feedbackCard.className = 'feedback-card good';
       feedbackTitle.textContent = '¡Muy bien! 🎉';
       feedbackSub.textContent = '';
     } else {
       sfxWrong();
-      speak(choice(COMFORT), 'es');
+      speak(tname(choice(COMFORT)), 'es');
       feedbackCard.className = 'feedback-card bad';
       feedbackTitle.textContent = 'Casi, casi…';
       feedbackSub.innerHTML = 'La respuesta correcta era: <strong>' + esc(correctText) + '</strong>';
@@ -540,14 +626,15 @@
   function finishLesson() {
     if (doneIds.indexOf(S.lesson.id) < 0) {
       doneIds.push(S.lesson.id);
-      store.set('sollingo_done', doneIds);
+      store.set(doneKey(), doneIds);
     }
     refreshHeader();
+    winTitle.textContent = '¡Felicidades, ' + profName() + '!';
     $('winText').textContent = '¡Completaste la lección "' + S.lesson.title + '"!';
     $('winXp').textContent = '+' + S.xpGain + ' XP';
     showScreen('win');
     sfxFanfare();
-    setTimeout(function () { speak(WIN_PHRASE, 'es'); }, 900);
+    setTimeout(function () { speak(tname(WIN_PHRASE), 'es'); }, 900);
   }
 
   $('againBtn').addEventListener('click', function () { startLesson(S.lesson.id); });
@@ -564,6 +651,33 @@
     showScreen('home');
   });
 
+  /* ==================== Perfiles ==================== */
+  function setProfile(p) {
+    if (!PROFILES[p]) return;
+    profile = p;
+    store.set('sollingo_profile', p);
+    xp = store.get(xpKey(), 0);
+    doneIds = store.get(doneKey(), []);
+    renderHome();
+    refreshHeader();
+    showScreen('home');
+  }
+
+  function renderProfileScreen() {
+    var cards = document.querySelectorAll('.profile-card');
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].addEventListener('click', function () {
+        setProfile(this.getAttribute('data-profile'));
+      });
+    }
+  }
+
+  profileBtn.addEventListener('click', function () {
+    stopSpeak();
+    feedback.classList.add('hidden');
+    showScreen('profile');
+  });
+
   /* ==================== Silenciar ==================== */
   muteBtn.addEventListener('click', function () {
     muted = !muted;
@@ -573,7 +687,13 @@
   });
 
   /* ==================== Arranque ==================== */
-  renderHome();
-  refreshHeader();
-  showScreen('home');
+  renderProfileScreen();
+  if (profile) {
+    renderHome();
+    refreshHeader();
+    showScreen('home');
+  } else {
+    refreshHeader();
+    showScreen('profile');
+  }
 })();
