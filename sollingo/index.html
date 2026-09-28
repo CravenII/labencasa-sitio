@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#0b2239">
 <meta name="description" content="SolLingo: inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 <div id="app">
@@ -42,7 +42,15 @@
       <p class="subtitle">Inglés útil para tu vida real. Escucha, responde y celebra cada pequeño avance.</p>
     </div>
     <h2>Elige tu aventura</h2>
-    <p class="section-sub">Ocho situaciones, cincuenta frases de verdad</p>
+    <p class="section-sub">Ocho situaciones, 160 frases de verdad</p>
+    <div id="levelBox" class="level-box hidden">
+      <p class="level-label">Tu nivel, Mirella 💛</p>
+      <div class="level-btns">
+        <button class="level-btn" data-level="1">😊<span>Fácil</span></button>
+        <button class="level-btn" data-level="2">💪<span>Medio</span></button>
+        <button class="level-btn" data-level="3">🚀<span>Difícil</span></button>
+      </div>
+    </div>
     <div id="lessonList" class="lesson-list"></div>
     <p class="footer-note">Hecho con ☀️ para ti · Sin anuncios · Sin pagos · Gratis siempre</p>
   </section>
@@ -76,6 +84,6 @@
     </div>
   </div>
 </div>
-<script src="app.js?v=2"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

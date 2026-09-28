@@ -9,13 +9,26 @@
       title: 'Mi día, a mi manera',
       desc: 'Mañanas, planes y conversaciones en casa',
       phrases: [
-        ['Me levanto a las siete', 'I wake up at seven'],
-        ['Preparo el desayuno', 'I make breakfast'],
-        ['¿Dónde están mis llaves?', 'Where are my keys?'],
-        ['Hoy trabajo desde casa', 'I work from home today'],
-        ['Llamo a mi hija', 'I call my daughter'],
-        ['La cena está lista', 'Dinner is ready'],
-        ['Buenas noches, hasta mañana', 'Good night, see you tomorrow']
+        ['Me levanto a las siete', 'I wake up at seven', 1],
+        ['Preparo el desayuno', 'I make breakfast', 1],
+        ['Llamo a mi hija', 'I call my daughter', 1],
+        ['La cena está lista', 'Dinner is ready', 1],
+        ['Buenas noches, hasta mañana', 'Good night, see you tomorrow', 1],
+        ['Me acuesto temprano', 'I go to bed early', 1],
+        ['Lavo los platos', 'I wash the dishes', 1],
+        ['Abro la ventana', 'I open the window', 1],
+        ['¿Dónde están mis llaves?', 'Where are my keys?', 2],
+        ['Hoy trabajo desde casa', 'I work from home today', 2],
+        ['Desayuno con mi familia', 'I have breakfast with my family', 2],
+        ['Hoy es un día ocupado', 'Today is a busy day', 2],
+        ['Preparo café por la mañana', 'I make coffee in the morning', 2],
+        ['Riego las plantas', 'I water the plants', 2],
+        ['Doblo la ropa limpia', 'I fold the clean laundry', 2],
+        ['Antes de dormir leo un rato', 'Before sleeping I read for a while', 3],
+        ['Mañana tengo una cita temprano', 'Tomorrow I have an early appointment', 3],
+        ['¿Apagaste las luces de la cocina?', 'Did you turn off the kitchen lights?', 3],
+        ['Después de cenar salimos a caminar', 'After dinner we go out for a walk', 3],
+        ['El fin de semana dormimos hasta tarde', 'On weekends we sleep in late', 3]
       ]
     },
     {
@@ -23,13 +36,26 @@
       title: 'Recados sin miedo',
       desc: 'Tiendas, transporte, pagos y paquetes',
       phrases: [
-        ['¿Cuánto cuesta?', 'How much is it?'],
-        ['¿Aceptan tarjeta?', 'Do you take card?'],
-        ['Necesito una bolsa, por favor', 'I need a bag, please'],
-        ['¿Dónde queda la farmacia?', 'Where is the pharmacy?'],
-        ['Un boleto de ida, por favor', 'A one-way ticket, please'],
-        ['¿A qué hora sale el autobús?', 'What time does the bus leave?'],
-        ['El paquete llegó ayer', 'The package arrived yesterday']
+        ['¿Cuánto cuesta?', 'How much is it?', 1],
+        ['Hola, buenos días', 'Hello, good morning', 1],
+        ['Gracias, hasta luego', 'Thanks, see you later', 1],
+        ['¿Dónde pago?', 'Where do I pay?', 1],
+        ['¿Tienen cambio?', 'Do you have change?', 1],
+        ['Es muy caro', 'It is very expensive', 1],
+        ['Me gusta este', 'I like this one', 1],
+        ['Quiero dos, por favor', 'I want two, please', 1],
+        ['¿Aceptan tarjeta?', 'Do you take card?', 2],
+        ['Necesito una bolsa, por favor', 'I need a bag, please', 2],
+        ['¿Dónde queda la farmacia?', 'Where is the pharmacy?', 2],
+        ['Un boleto de ida, por favor', 'A one-way ticket, please', 2],
+        ['¿Dónde está el baño?', 'Where is the bathroom?', 2],
+        ['Busco la parada del autobús', 'I am looking for the bus stop', 2],
+        ['¿Me puede dar un recibo?', 'Can I have a receipt?', 2],
+        ['¿A qué hora sale el autobús?', 'What time does the bus leave?', 3],
+        ['El paquete llegó ayer', 'The package arrived yesterday', 3],
+        ['¿Cuánto cuesta el envío a domicilio?', 'How much is home delivery?', 3],
+        ['Ayer compré los regalos de Navidad', 'Yesterday I bought the Christmas gifts', 3],
+        ['¿Me puede mostrar algo más barato?', 'Can you show me something cheaper?', 3]
       ]
     },
     {
@@ -37,12 +63,26 @@
       title: 'Gente que quiero',
       desc: 'Familia y amigos',
       phrases: [
-        ['Mi esposo me ayuda mucho', 'My husband helps me a lot'],
-        ['Hablamos todos los días', 'We talk every day'],
-        ['Ella es mi mejor amiga', 'She is my best friend'],
-        ['Vamos a visitar a la familia', 'We are going to visit family'],
-        ['Te quiero mucho', 'I love you very much'],
-        ['Nos vemos el domingo', 'See you on Sunday']
+        ['Ella es mi mejor amiga', 'She is my best friend', 1],
+        ['Te quiero mucho', 'I love you very much', 1],
+        ['Nos vemos el domingo', 'See you on Sunday', 1],
+        ['Él es mi esposo', 'He is my husband', 1],
+        ['Ella es mi hija', 'She is my daughter', 1],
+        ['Somos una familia feliz', 'We are a happy family', 1],
+        ['Mi mamá cocina muy bien', 'My mom cooks very well', 1],
+        ['Los quiero a todos', 'I love you all', 1],
+        ['Mi esposo me ayuda mucho', 'My husband helps me a lot', 2],
+        ['Hablamos todos los días', 'We talk every day', 2],
+        ['Vamos a visitar a la familia', 'We are going to visit family', 2],
+        ['Mi hija me llama cada noche', 'My daughter calls me every night', 2],
+        ['Cenamos juntos los domingos', 'We have dinner together on Sundays', 2],
+        ['Mi amiga vive cerca de aquí', 'My friend lives near here', 2],
+        ['Nos ayudamos en todo', 'We help each other with everything', 2],
+        ['Mi hermana viene el domingo que viene', 'My sister is coming next Sunday', 3],
+        ['Hace años que nos conocemos', 'We have known each other for years', 3],
+        ['¿Te acuerdas de nuestra vecina?', 'Do you remember our neighbor?', 3],
+        ['Mis hijos ya están grandes', 'My children are all grown up', 3],
+        ['La quiero como a una hermana', 'I love her like a sister', 3]
       ]
     },
     {
@@ -50,12 +90,26 @@
       title: 'Salgo y disfruto',
       desc: 'Salidas y restaurante',
       phrases: [
-        ['Una mesa para dos, por favor', 'A table for two, please'],
-        ['La cuenta, por favor', 'The check, please'],
-        ['Estaba delicioso', 'It was delicious'],
-        ['¿Qué me recomienda?', 'What do you recommend?'],
-        ['Vamos a dar un paseo', "Let's go for a walk"],
-        ['Qué bonito atardecer', 'What a beautiful sunset']
+        ['La cuenta, por favor', 'The check, please', 1],
+        ['Una cerveza, por favor', 'A beer, please', 1],
+        ['Agua sin hielo', 'Water with no ice', 1],
+        ['Está muy rico', 'It is very tasty', 1],
+        ['Salud', 'Cheers', 1],
+        ['Me encanta la música', 'I love the music', 1],
+        ['¿Quiere bailar?', 'Do you want to dance?', 1],
+        ['Qué lindo lugar', 'What a nice place', 1],
+        ['Una mesa para dos, por favor', 'A table for two, please', 2],
+        ['Estaba delicioso', 'It was delicious', 2],
+        ['¿Qué me recomienda?', 'What do you recommend?', 2],
+        ['Vamos a dar un paseo', "Let's go for a walk", 2],
+        ['Qué bonito atardecer', 'What a beautiful sunset', 2],
+        ['¿Tienen mesa afuera?', 'Do you have a table outside?', 2],
+        ['Hoy invito yo', 'Today it is my treat', 2],
+        ['¿Nos puede tomar una foto, por favor?', 'Can you take our picture, please?', 3],
+        ['El servicio estuvo excelente', 'The service was excellent', 3],
+        ['Reservé para las siete de la noche', 'I booked a table for seven at night', 3],
+        ['¿Aceptan reservaciones en línea?', 'Do you take online reservations?', 3],
+        ['La próxima vez probamos el postre', 'Next time we will try the dessert', 3]
       ]
     },
     {
@@ -63,12 +117,26 @@
       title: 'De compras',
       desc: 'En la tienda',
       phrases: [
-        ['¿Tienen una talla más grande?', 'Do you have a bigger size?'],
-        ['Solo estoy mirando, gracias', "I'm just looking, thanks"],
-        ['¿Dónde está la caja?', 'Where is the checkout?'],
-        ['Me lo llevo', "I'll take it"],
-        ['¿Tienen descuento hoy?', 'Do you have a discount today?'],
-        ['Busco un regalo para mi hija', "I'm looking for a gift for my daughter"]
+        ['Me lo llevo', "I'll take it", 1],
+        ['¿Cuánto es?', 'How much?', 1],
+        ['Muy bonito', 'Very pretty', 1],
+        ['No, gracias', 'No, thank you', 1],
+        ['Sí, por favor', 'Yes, please', 1],
+        ['Es perfecto', 'It is perfect', 1],
+        ['Me queda bien', 'It fits me well', 1],
+        ['¿Puedo probármelo?', 'Can I try it on?', 1],
+        ['¿Tienen una talla más grande?', 'Do you have a bigger size?', 2],
+        ['Solo estoy mirando, gracias', "I'm just looking, thanks", 2],
+        ['¿Dónde está la caja?', 'Where is the checkout?', 2],
+        ['¿Tienen descuento hoy?', 'Do you have a discount today?', 2],
+        ['Busco un regalo para mi hija', "I'm looking for a gift for my daughter", 2],
+        ['¿Tienen otro color?', 'Do you have another color?', 2],
+        ['¿Dónde están los probadores?', 'Where are the fitting rooms?', 2],
+        ['¿Este producto tiene garantía?', 'Does this product come with a warranty?', 3],
+        ['¿Puedo devolverlo si no me queda?', 'Can I return it if it does not fit?', 3],
+        ['Estoy buscando algo para el invierno', 'I am looking for something for winter', 3],
+        ['¿Hacen envíos a domicilio?', 'Do you deliver to homes?', 3],
+        ['Me lo recomendó una amiga', 'A friend recommended it to me', 3]
       ]
     },
     {
@@ -76,12 +144,26 @@
       title: 'Cuídate mucho',
       desc: 'Salud y farmacia',
       phrases: [
-        ['Necesito una cita', 'I need an appointment'],
-        ['Me duele la cabeza', 'My head hurts'],
-        ['Tengo fiebre', 'I have a fever'],
-        ['Soy alérgica a este medicamento', "I'm allergic to this medicine"],
-        ['¿Cada cuántas horas?', 'Every how many hours?'],
-        ['Necesito ver a un doctor', 'I need to see a doctor']
+        ['Me duele la cabeza', 'My head hurts', 1],
+        ['Tengo fiebre', 'I have a fever', 1],
+        ['Me siento mal', 'I feel sick', 1],
+        ['Me duele el estómago', 'My stomach hurts', 1],
+        ['Tengo tos', 'I have a cough', 1],
+        ['Necesito ayuda', 'I need help', 1],
+        ['Llama a mi esposo', 'Call my husband', 1],
+        ['¿Dónde duele?', 'Where does it hurt?', 1],
+        ['Necesito una cita', 'I need an appointment', 2],
+        ['Soy alérgica a este medicamento', "I'm allergic to this medicine", 2],
+        ['¿Cada cuántas horas?', 'Every how many hours?', 2],
+        ['Necesito ver a un doctor', 'I need to see a doctor', 2],
+        ['¿Tienen algo para el dolor?', 'Do you have something for the pain?', 2],
+        ['Necesito mis medicinas', 'I need my medicine', 2],
+        ['Me siento mejor hoy', 'I feel better today', 2],
+        ['Desde ayer me duele la espalda', 'My back has hurt since yesterday', 3],
+        ['¿Necesito receta para esto?', 'Do I need a prescription for this?', 3],
+        ['Soy diabética, ¿tiene azúcar?', 'I am diabetic, does it have sugar?', 3],
+        ['¿Cuáles son los efectos secundarios?', 'What are the side effects?', 3],
+        ['El doctor me dijo que descanse', 'The doctor told me to rest', 3]
       ]
     },
     {
@@ -89,12 +171,26 @@
       title: 'Buen viaje',
       desc: 'Viajes',
       phrases: [
-        ['¿Dónde está la salida?', 'Where is the exit?'],
-        ['Mi vuelo se retrasó', 'My flight is delayed'],
-        ['¿Hay wifi aquí?', 'Is there wifi here?'],
-        ['¿A qué hora es el desayuno?', 'What time is breakfast?'],
-        ['La habitación no está lista', 'The room is not ready'],
-        ['Una noche más, por favor', 'One more night, please']
+        ['¿Hay wifi aquí?', 'Is there wifi here?', 1],
+        ['¿Dónde es?', 'Where is it?', 1],
+        ['Mi pasaporte', 'My passport', 1],
+        ['Una maleta', 'One suitcase', 1],
+        ['Ventana, por favor', 'Window, please', 1],
+        ['Gracias por su ayuda', 'Thank you for your help', 1],
+        ['¿Habla español?', 'Do you speak Spanish?', 1],
+        ['Necesito un taxi', 'I need a taxi', 1],
+        ['¿Dónde está la salida?', 'Where is the exit?', 2],
+        ['Mi vuelo se retrasó', 'My flight is delayed', 2],
+        ['¿A qué hora es el desayuno?', 'What time is breakfast?', 2],
+        ['La habitación no está lista', 'The room is not ready', 2],
+        ['Una noche más, por favor', 'One more night, please', 2],
+        ['¿Dónde recojo mi equipaje?', 'Where do I pick up my luggage?', 2],
+        ['Perdí mi conexión', 'I missed my connection', 2],
+        ['¿A qué hora sale el próximo tren?', 'What time does the next train leave?', 3],
+        ['La reserva está a mi nombre', 'The reservation is under my name', 3],
+        ['¿La tarifa incluye el desayuno?', 'Does the rate include breakfast?', 3],
+        ['Quisiera cambiar mi asiento', 'I would like to change my seat', 3],
+        ['El vuelo dura tres horas', 'The flight lasts three hours', 3]
       ]
     },
     {
@@ -102,12 +198,26 @@
       title: 'Vecinos y amigos',
       desc: 'Vida social',
       phrases: [
-        ['¿Me puede ayudar, por favor?', 'Can you help me, please?'],
-        ['Perdón por el ruido', 'Sorry for the noise'],
-        ['Bienvenidos a nuestra casa', 'Welcome to our home'],
-        ['¿Viene mañana a cenar?', 'Are you coming for dinner tomorrow?'],
-        ['Muchas gracias por todo', 'Thank you so much for everything'],
-        ['Nos vemos pronto', 'See you soon']
+        ['Perdón por el ruido', 'Sorry for the noise', 1],
+        ['Bienvenidos a nuestra casa', 'Welcome to our home', 1],
+        ['Nos vemos pronto', 'See you soon', 1],
+        ['Hola, vecino', 'Hello, neighbor', 1],
+        ['Con permiso', 'Excuse me', 1],
+        ['Pase adelante', 'Come in', 1],
+        ['Hasta mañana', 'See you tomorrow', 1],
+        ['Qué gusto verla', 'So nice to see you', 1],
+        ['¿Me puede ayudar, por favor?', 'Can you help me, please?', 2],
+        ['¿Viene mañana a cenar?', 'Are you coming for dinner tomorrow?', 2],
+        ['Muchas gracias por todo', 'Thank you so much for everything', 2],
+        ['¿Le gusta el café?', 'Would you like some coffee?', 2],
+        ['Mi casa es su casa', 'My home is your home', 2],
+        ['Cuénteme, ¿cómo está?', 'Tell me, how are you?', 2],
+        ['La fiesta estuvo linda', 'The party was lovely', 2],
+        ['¿Le importa si pongo música?', 'Do you mind if I play music?', 3],
+        ['Hace tiempo que no nos veíamos', 'It has been a long time', 3],
+        ['Gracias por venir desde tan lejos', 'Thanks for coming from so far', 3],
+        ['La próxima reunión es en mi casa', 'The next get-together is at my house', 3],
+        ['Me alegra que se hayan conocido', 'I am glad you two met', 3]
       ]
     }
   ];
@@ -244,14 +354,23 @@
     loadVoices();
     try { window.speechSynthesis.onvoiceschanged = loadVoices; } catch (e) {}
   }
-  function findVoice(prefixes) {
-    for (var i = 0; i < prefixes.length; i++) {
-      for (var j = 0; j < voices.length; j++) {
-        var l = (voices[j].lang || '').toLowerCase();
-        if (l.indexOf(prefixes[i]) === 0) return voices[j];
+  function pickVoice(langPrefix, prefer) {
+    var best = null, bestScore = -1;
+    for (var j = 0; j < voices.length; j++) {
+      var l = (voices[j].lang || '').toLowerCase();
+      if (l.indexOf(langPrefix) !== 0) continue;
+      var name = (voices[j].name || '').toLowerCase();
+      var s = 0;
+      if (name.indexOf('google') >= 0) s += 4;
+      if (name.indexOf('natural') >= 0 || name.indexOf('enhanced') >= 0 ||
+          name.indexOf('premium') >= 0 || name.indexOf('neural') >= 0) s += 3;
+      for (var p = 0; p < prefer.length; p++) {
+        if (l.indexOf(prefer[p]) === 0) { s += 2; break; }
       }
+      if (voices[j].localService === false) s += 1;
+      if (s > bestScore) { bestScore = s; best = voices[j]; }
     }
-    return null;
+    return best;
   }
   function speak(text, lang) {
     if (muted) return;
@@ -259,20 +378,55 @@
       if (!('speechSynthesis' in window)) return;
       var u = new SpeechSynthesisUtterance(text);
       if (lang === 'es') {
-        var v = findVoice(['es-us', 'es-mx', 'es_419', 'es-es', 'es']);
+        var v = pickVoice('es', ['es-us', 'es-mx', 'es_419', 'es-es']);
         u.lang = v ? v.lang : 'es-ES';
         if (v) u.voice = v;
-        u.rate = 1;
-        u.pitch = 1.1;
+        u.rate = 0.95;
+        u.pitch = 1;
       } else {
-        var w = findVoice(['en-us', 'en']);
+        var w = pickVoice('en', ['en-us']);
         u.lang = w ? w.lang : 'en-US';
         if (w) u.voice = w;
         u.rate = 0.9;
+        u.pitch = 1;
       }
+      u.volume = 1;
       window.speechSynthesis.cancel();
-      window.speechSynthesis.speak(u);
+      setTimeout(function () {
+        try { window.speechSynthesis.speak(u); } catch (e) {}
+      }, 60);
     } catch (e) { /* sin voz, pero la app sigue */ }
+  }
+  /* Audios pregrabados con la voz de Sol; si el archivo falta, usa la voz del sistema */
+  function playAudioFile(url, fallbackText, fallbackLang) {
+    if (muted) return;
+    var done = false;
+    function fallback() {
+      if (done) return;
+      done = true;
+      speak(fallbackText, fallbackLang);
+    }
+    try {
+      var a = new Audio(url);
+      a.onerror = fallback;
+      var p = a.play();
+      if (p && typeof p.catch === 'function') p.catch(fallback);
+    } catch (e) { fallback(); }
+  }
+  function playPraise() {
+    var i = rnd(PRAISE.length);
+    playAudioFile('audio/es/praise-' + profile + '-' + i + '.mp3', tname(PRAISE[i]), 'es');
+  }
+  function playComfort() {
+    var i = rnd(COMFORT.length);
+    var url = i === 0 ? 'audio/es/comfort-' + profile + '-0.mp3' : 'audio/es/comfort-' + i + '.mp3';
+    playAudioFile(url, tname(COMFORT[i]), 'es');
+  }
+  function playWin() {
+    playAudioFile('audio/es/win-' + profile + '.mp3', tname(WIN_PHRASE), 'es');
+  }
+  function playEnglish(lessonId, phraseIdx, englishText) {
+    playAudioFile('audio/en/' + lessonId + '-' + phraseIdx + '.mp3', englishText, 'en');
   }
   function stopSpeak() {
     try {
@@ -289,6 +443,7 @@
   var lessonList = $('lessonList'), exerciseBox = $('exercise'), progressFill = $('progressFill');
   var feedback = $('feedback'), feedbackCard = $('feedbackCard');
   var feedbackTitle = $('feedbackTitle'), feedbackSub = $('feedbackSub');
+  var levelBox = $('levelBox');
 
   function showScreen(name) {
     screenProfile.classList.toggle('hidden', name !== 'profile');
@@ -312,13 +467,33 @@
   /* ==================== Inicio ==================== */
   function renderHome() {
     heroTitle.textContent = '¡Hoy vas a sorprenderte, ' + profName() + '!';
+    var lvl = mirellaLevel();
+    if (levelBox) {
+      levelBox.classList.toggle('hidden', !lvl);
+      if (lvl) {
+        var lb = levelBox.querySelectorAll('.level-btn');
+        for (var b = 0; b < lb.length; b++) {
+          (function (btn) {
+            var lv = parseInt(btn.getAttribute('data-level'), 10);
+            btn.classList.toggle('active', lv === lvl);
+            btn.onclick = function () {
+              store.set('sollingo_mirella_level', lv);
+              stopSpeak();
+              renderHome();
+            };
+          })(lb[b]);
+        }
+      }
+    }
     var html = '';
     for (var i = 0; i < LESSONS.length; i++) {
       var l = LESSONS[i];
       var isDone = doneIds.indexOf(l.id) >= 0;
+      var nPhrases = phraseIdxs(l).length;
       html += '<button class="lesson-card" data-lesson="' + l.id + '">' +
         '<span class="lesson-num">' + l.num + '</span>' +
         '<span class="lesson-info"><h3>' + esc(l.title) + '</h3><p>' + esc(l.desc) + '</p>' +
+        '<span class="lesson-count">' + nPhrases + ' frases' + (lvl ? ' · Nivel ' + LEVEL_NAMES[lvl] : '') + '</span>' +
         (isDone ? '<span class="lesson-done">✓ Completada</span>' : '') +
         '</span><span class="playbtn">▶</span></button>';
     }
@@ -349,25 +524,54 @@
     renderExercise();
   }
 
+  /* Nivel de Mirella: 1=Fácil, 2=Medio, 3=Difícil. Nelly usa todas las frases. */
+  var LEVEL_NAMES = { 1: 'Fácil', 2: 'Medio', 3: 'Difícil' };
+  function mirellaLevel() {
+    if (profile !== 'mirella') return 0;
+    return store.get('sollingo_mirella_level', 1);
+  }
+  function phraseIdxs(lesson) {
+    var lvl = mirellaLevel();
+    var out = [];
+    for (var i = 0; i < lesson.phrases.length; i++) {
+      if (!lvl || lesson.phrases[i][2] === lvl) out.push(i);
+    }
+    return out;
+  }
+
   function buildExercises(lesson) {
-    var types = shuffle(['choose', 'listen', 'order', 'fill', 'choose', 'listen', 'order', 'fill']);
+    var types = shuffle(['choose', 'listen', 'order', 'fill',
+                         'choose', 'listen', 'order', 'fill',
+                         'choose', 'listen', 'order', 'fill']);
+    var idxs = phraseIdxs(lesson);
     var exs = [];
     var last = -1;
     for (var i = 0; i < types.length; i++) {
-      var pi;
-      do { pi = rnd(lesson.phrases.length); } while (pi === last);
-      last = pi;
-      exs.push({ type: types[i], pi: pi });
+      var k;
+      do { k = rnd(idxs.length); } while (k === last && idxs.length > 1);
+      last = k;
+      exs.push({ type: types[i], pi: idxs[k] });
     }
     return exs;
   }
 
-  /* Frases de las demás lecciones como distractores */
+  /* Frases de la lección actual como distractores (respetando el nivel, sin la actual) */
+  function lessonPool(exceptPi) {
+    var pool = [];
+    var idxs = phraseIdxs(S.lesson);
+    for (var i = 0; i < idxs.length; i++) {
+      if (idxs[i] !== exceptPi) pool.push(S.lesson.phrases[idxs[i]]);
+    }
+    return pool;
+  }
+
+  /* Frases de las demás lecciones como distractores (respetando el nivel) */
   function otherPhrases() {
     var pool = [];
     for (var i = 0; i < LESSONS.length; i++) {
       if (LESSONS[i].id === S.lesson.id) continue;
-      for (var j = 0; j < LESSONS[i].phrases.length; j++) pool.push(LESSONS[i].phrases[j]);
+      var idxs = phraseIdxs(LESSONS[i]);
+      for (var j = 0; j < idxs.length; j++) pool.push(LESSONS[i].phrases[idxs[j]]);
     }
     return shuffle(pool);
   }
@@ -390,12 +594,7 @@
     if (dir === 'es2en') { q = ph[0]; correctAns = ph[1]; getOpt = function (p) { return p[1]; }; }
     else { q = ph[1]; correctAns = ph[0]; getOpt = function (p) { return p[0]; }; }
 
-    var pool = [];
-    for (var i = 0; i < S.lesson.phrases.length; i++) {
-      if (i !== ex.pi) pool.push(S.lesson.phrases[i]);
-    }
-    pool = pool.concat(otherPhrases());
-    pool = shuffle(pool);
+    var pool = shuffle(lessonPool(ex.pi).concat(otherPhrases()));
 
     var opts = [correctAns];
     for (var k = 0; k < pool.length && opts.length < 4; k++) {
@@ -433,11 +632,7 @@
   /* ---- Tipo 2: escucha y elige ---- */
   function renderListen(ex) {
     var ph = S.lesson.phrases[ex.pi];
-    var pool = [];
-    for (var i = 0; i < S.lesson.phrases.length; i++) {
-      if (i !== ex.pi) pool.push(S.lesson.phrases[i]);
-    }
-    pool = shuffle(pool.concat(otherPhrases()));
+    var pool = shuffle(lessonPool(ex.pi).concat(otherPhrases()));
 
     var opts = [ph[0]];
     for (var k = 0; k < pool.length && opts.length < 4; k++) {
@@ -454,7 +649,7 @@
     }
     exerciseBox.innerHTML = html + '</div>';
 
-    var sayIt = function () { speak(ph[1], 'en'); };
+    var sayIt = function () { playEnglish(S.lesson.id, ex.pi, ph[1]); };
     $('replayBtn').addEventListener('click', sayIt);
     setTimeout(sayIt, 350);
 
@@ -558,9 +753,14 @@
         }
       }
     }
-    addWords(S.lesson.phrases);
+    addWords(lessonPool(ex.pi));
     for (var li = 0; li < LESSONS.length && poolWords.length < 12; li++) {
-      if (LESSONS[li].id !== S.lesson.id) addWords(LESSONS[li].phrases);
+      if (LESSONS[li].id !== S.lesson.id) {
+        var lidxs = phraseIdxs(LESSONS[li]);
+        var llist = [];
+        for (var q = 0; q < lidxs.length; q++) llist.push(LESSONS[li].phrases[lidxs[q]]);
+        addWords(llist);
+      }
     }
     poolWords = shuffle(poolWords);
 
@@ -600,13 +800,13 @@
       store.set(xpKey(), xp);
       refreshHeader();
       sfxCorrect();
-      speak(tname(choice(PRAISE)), 'es');
+      playPraise();
       feedbackCard.className = 'feedback-card good';
       feedbackTitle.textContent = '¡Muy bien! 🎉';
       feedbackSub.textContent = '';
     } else {
       sfxWrong();
-      speak(tname(choice(COMFORT)), 'es');
+      playComfort();
       feedbackCard.className = 'feedback-card bad';
       feedbackTitle.textContent = 'Casi, casi…';
       feedbackSub.innerHTML = 'La respuesta correcta era: <strong>' + esc(correctText) + '</strong>';
@@ -634,7 +834,7 @@
     $('winXp').textContent = '+' + S.xpGain + ' XP';
     showScreen('win');
     sfxFanfare();
-    setTimeout(function () { speak(tname(WIN_PHRASE), 'es'); }, 900);
+    setTimeout(playWin, 900);
   }
 
   $('againBtn').addEventListener('click', function () { startLesson(S.lesson.id); });

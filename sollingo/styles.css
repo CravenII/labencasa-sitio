@@ -413,6 +413,51 @@ h2 {
   .option { font-size: 17px; }
 }
 
+/* ---------- Niveles (Mirella) ---------- */
+.level-box { margin: 0 2px 16px; }
+
+.level-label {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.level-btns { display: flex; gap: 10px; }
+
+.level-btn {
+  flex: 1;
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 12px 6px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.level-btn:active { transform: scale(0.96); }
+
+.level-btn span { font-size: 15px; font-weight: 800; }
+
+.level-btn.active {
+  border-color: var(--accent);
+  background: rgba(255, 201, 60, 0.12);
+}
+
+.lesson-count {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-top: 4px;
+}
+
 /* ---------- Perfiles ---------- */
 .profile-list { display: flex; flex-direction: column; gap: 12px; }
 
