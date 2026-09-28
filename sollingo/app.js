@@ -9,14 +9,14 @@
       title: 'Mi día, a mi manera',
       desc: 'Mañanas, planes y conversaciones en casa',
       phrases: [
-        ['Me levanto a las siete', 'I wake up at seven', 1],
-        ['Preparo el desayuno', 'I make breakfast', 1],
-        ['Llamo a mi hija', 'I call my daughter', 1],
-        ['La cena está lista', 'Dinner is ready', 1],
-        ['Buenas noches, hasta mañana', 'Good night, see you tomorrow', 1],
-        ['Me acuesto temprano', 'I go to bed early', 1],
-        ['Lavo los platos', 'I wash the dishes', 1],
-        ['Abro la ventana', 'I open the window', 1],
+        ['Buenos días', 'Good morning', 1],
+        ['Buenas tardes', 'Good afternoon', 1],
+        ['Buenas noches', 'Good night', 1],
+        ['Hola', 'Hello', 1],
+        ['Adiós', 'Goodbye', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
+        ['De nada', "You're welcome", 1],
         ['¿Dónde están mis llaves?', 'Where are my keys?', 2],
         ['Hoy trabajo desde casa', 'I work from home today', 2],
         ['Desayuno con mi familia', 'I have breakfast with my family', 2],
@@ -28,7 +28,7 @@
         ['Mañana tengo una cita temprano', 'Tomorrow I have an early appointment', 3],
         ['¿Apagaste las luces de la cocina?', 'Did you turn off the kitchen lights?', 3],
         ['Después de cenar salimos a caminar', 'After dinner we go out for a walk', 3],
-        ['El fin de semana dormimos hasta tarde', 'On weekends we sleep in late', 3]
+        ['El fin de semana dormimos hasta tarde', 'On weekends we sleep in late', 3],
       ]
     },
     {
@@ -36,14 +36,14 @@
       title: 'Recados sin miedo',
       desc: 'Tiendas, transporte, pagos y paquetes',
       phrases: [
-        ['¿Cuánto cuesta?', 'How much is it?', 1],
-        ['Hola, buenos días', 'Hello, good morning', 1],
-        ['Gracias, hasta luego', 'Thanks, see you later', 1],
-        ['¿Dónde pago?', 'Where do I pay?', 1],
-        ['¿Tienen cambio?', 'Do you have change?', 1],
-        ['Es muy caro', 'It is very expensive', 1],
-        ['Me gusta este', 'I like this one', 1],
-        ['Quiero dos, por favor', 'I want two, please', 1],
+        ['¿Cuánto?', 'How much?', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
+        ['Sí', 'Yes', 1],
+        ['No', 'No', 1],
+        ['Hola', 'Hello', 1],
+        ['Perdón', 'Sorry', 1],
+        ['Adiós', 'Goodbye', 1],
         ['¿Aceptan tarjeta?', 'Do you take card?', 2],
         ['Necesito una bolsa, por favor', 'I need a bag, please', 2],
         ['¿Dónde queda la farmacia?', 'Where is the pharmacy?', 2],
@@ -55,7 +55,7 @@
         ['El paquete llegó ayer', 'The package arrived yesterday', 3],
         ['¿Cuánto cuesta el envío a domicilio?', 'How much is home delivery?', 3],
         ['Ayer compré los regalos de Navidad', 'Yesterday I bought the Christmas gifts', 3],
-        ['¿Me puede mostrar algo más barato?', 'Can you show me something cheaper?', 3]
+        ['¿Me puede mostrar algo más barato?', 'Can you show me something cheaper?', 3],
       ]
     },
     {
@@ -63,14 +63,14 @@
       title: 'Gente que quiero',
       desc: 'Familia y amigos',
       phrases: [
-        ['Ella es mi mejor amiga', 'She is my best friend', 1],
-        ['Te quiero mucho', 'I love you very much', 1],
-        ['Nos vemos el domingo', 'See you on Sunday', 1],
-        ['Él es mi esposo', 'He is my husband', 1],
-        ['Ella es mi hija', 'She is my daughter', 1],
-        ['Somos una familia feliz', 'We are a happy family', 1],
-        ['Mi mamá cocina muy bien', 'My mom cooks very well', 1],
-        ['Los quiero a todos', 'I love you all', 1],
+        ['Mamá', 'Mom', 1],
+        ['Papá', 'Dad', 1],
+        ['Hija', 'Daughter', 1],
+        ['Hijo', 'Son', 1],
+        ['Familia', 'Family', 1],
+        ['Amiga', 'Friend', 1],
+        ['Te quiero', 'I love you', 1],
+        ['Hola, familia', 'Hello, family', 1],
         ['Mi esposo me ayuda mucho', 'My husband helps me a lot', 2],
         ['Hablamos todos los días', 'We talk every day', 2],
         ['Vamos a visitar a la familia', 'We are going to visit family', 2],
@@ -82,7 +82,7 @@
         ['Hace años que nos conocemos', 'We have known each other for years', 3],
         ['¿Te acuerdas de nuestra vecina?', 'Do you remember our neighbor?', 3],
         ['Mis hijos ya están grandes', 'My children are all grown up', 3],
-        ['La quiero como a una hermana', 'I love her like a sister', 3]
+        ['La quiero como a una hermana', 'I love her like a sister', 3],
       ]
     },
     {
@@ -90,14 +90,14 @@
       title: 'Salgo y disfruto',
       desc: 'Salidas y restaurante',
       phrases: [
-        ['La cuenta, por favor', 'The check, please', 1],
-        ['Una cerveza, por favor', 'A beer, please', 1],
-        ['Agua sin hielo', 'Water with no ice', 1],
-        ['Está muy rico', 'It is very tasty', 1],
         ['Salud', 'Cheers', 1],
-        ['Me encanta la música', 'I love the music', 1],
-        ['¿Quiere bailar?', 'Do you want to dance?', 1],
-        ['Qué lindo lugar', 'What a nice place', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
+        ['Qué rico', 'How tasty', 1],
+        ['Agua', 'Water', 1],
+        ['La cuenta', 'The check', 1],
+        ['Adiós', 'Goodbye', 1],
+        ['Hasta luego', 'See you later', 1],
         ['Una mesa para dos, por favor', 'A table for two, please', 2],
         ['Estaba delicioso', 'It was delicious', 2],
         ['¿Qué me recomienda?', 'What do you recommend?', 2],
@@ -109,7 +109,7 @@
         ['El servicio estuvo excelente', 'The service was excellent', 3],
         ['Reservé para las siete de la noche', 'I booked a table for seven at night', 3],
         ['¿Aceptan reservaciones en línea?', 'Do you take online reservations?', 3],
-        ['La próxima vez probamos el postre', 'Next time we will try the dessert', 3]
+        ['La próxima vez probamos el postre', 'Next time we will try the dessert', 3],
       ]
     },
     {
@@ -117,14 +117,14 @@
       title: 'De compras',
       desc: 'En la tienda',
       phrases: [
-        ['Me lo llevo', "I'll take it", 1],
-        ['¿Cuánto es?', 'How much?', 1],
-        ['Muy bonito', 'Very pretty', 1],
+        ['¿Cuánto?', 'How much?', 1],
+        ['Gracias', 'Thank you', 1],
         ['No, gracias', 'No, thank you', 1],
         ['Sí, por favor', 'Yes, please', 1],
-        ['Es perfecto', 'It is perfect', 1],
-        ['Me queda bien', 'It fits me well', 1],
-        ['¿Puedo probármelo?', 'Can I try it on?', 1],
+        ['Me gusta', 'I like it', 1],
+        ['Muy bonito', 'Very pretty', 1],
+        ['Adiós', 'Goodbye', 1],
+        ['Perfecto', 'Perfect', 1],
         ['¿Tienen una talla más grande?', 'Do you have a bigger size?', 2],
         ['Solo estoy mirando, gracias', "I'm just looking, thanks", 2],
         ['¿Dónde está la caja?', 'Where is the checkout?', 2],
@@ -136,7 +136,7 @@
         ['¿Puedo devolverlo si no me queda?', 'Can I return it if it does not fit?', 3],
         ['Estoy buscando algo para el invierno', 'I am looking for something for winter', 3],
         ['¿Hacen envíos a domicilio?', 'Do you deliver to homes?', 3],
-        ['Me lo recomendó una amiga', 'A friend recommended it to me', 3]
+        ['Me lo recomendó una amiga', 'A friend recommended it to me', 3],
       ]
     },
     {
@@ -144,14 +144,14 @@
       title: 'Cuídate mucho',
       desc: 'Salud y farmacia',
       phrases: [
-        ['Me duele la cabeza', 'My head hurts', 1],
-        ['Tengo fiebre', 'I have a fever', 1],
-        ['Me siento mal', 'I feel sick', 1],
-        ['Me duele el estómago', 'My stomach hurts', 1],
-        ['Tengo tos', 'I have a cough', 1],
-        ['Necesito ayuda', 'I need help', 1],
-        ['Llama a mi esposo', 'Call my husband', 1],
-        ['¿Dónde duele?', 'Where does it hurt?', 1],
+        ['Ayuda', 'Help', 1],
+        ['Doctor', 'Doctor', 1],
+        ['Farmacia', 'Pharmacy', 1],
+        ['Me duele', 'It hurts', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
+        ['Estoy bien', "I'm OK", 1],
+        ['Cita', 'Appointment', 1],
         ['Necesito una cita', 'I need an appointment', 2],
         ['Soy alérgica a este medicamento', "I'm allergic to this medicine", 2],
         ['¿Cada cuántas horas?', 'Every how many hours?', 2],
@@ -163,7 +163,7 @@
         ['¿Necesito receta para esto?', 'Do I need a prescription for this?', 3],
         ['Soy diabética, ¿tiene azúcar?', 'I am diabetic, does it have sugar?', 3],
         ['¿Cuáles son los efectos secundarios?', 'What are the side effects?', 3],
-        ['El doctor me dijo que descanse', 'The doctor told me to rest', 3]
+        ['El doctor me dijo que descanse', 'The doctor told me to rest', 3],
       ]
     },
     {
@@ -171,14 +171,14 @@
       title: 'Buen viaje',
       desc: 'Viajes',
       phrases: [
-        ['¿Hay wifi aquí?', 'Is there wifi here?', 1],
-        ['¿Dónde es?', 'Where is it?', 1],
-        ['Mi pasaporte', 'My passport', 1],
-        ['Una maleta', 'One suitcase', 1],
-        ['Ventana, por favor', 'Window, please', 1],
-        ['Gracias por su ayuda', 'Thank you for your help', 1],
-        ['¿Habla español?', 'Do you speak Spanish?', 1],
-        ['Necesito un taxi', 'I need a taxi', 1],
+        ['Hola', 'Hello', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
+        ['Taxi', 'Taxi', 1],
+        ['Hotel', 'Hotel', 1],
+        ['Aeropuerto', 'Airport', 1],
+        ['Adiós', 'Goodbye', 1],
+        ['¿Dónde?', 'Where?', 1],
         ['¿Dónde está la salida?', 'Where is the exit?', 2],
         ['Mi vuelo se retrasó', 'My flight is delayed', 2],
         ['¿A qué hora es el desayuno?', 'What time is breakfast?', 2],
@@ -190,7 +190,7 @@
         ['La reserva está a mi nombre', 'The reservation is under my name', 3],
         ['¿La tarifa incluye el desayuno?', 'Does the rate include breakfast?', 3],
         ['Quisiera cambiar mi asiento', 'I would like to change my seat', 3],
-        ['El vuelo dura tres horas', 'The flight lasts three hours', 3]
+        ['El vuelo dura tres horas', 'The flight lasts three hours', 3],
       ]
     },
     {
@@ -198,14 +198,14 @@
       title: 'Vecinos y amigos',
       desc: 'Vida social',
       phrases: [
-        ['Perdón por el ruido', 'Sorry for the noise', 1],
-        ['Bienvenidos a nuestra casa', 'Welcome to our home', 1],
-        ['Nos vemos pronto', 'See you soon', 1],
         ['Hola, vecino', 'Hello, neighbor', 1],
+        ['Gracias', 'Thank you', 1],
+        ['Por favor', 'Please', 1],
         ['Con permiso', 'Excuse me', 1],
-        ['Pase adelante', 'Come in', 1],
+        ['Bienvenido', 'Welcome', 1],
         ['Hasta mañana', 'See you tomorrow', 1],
-        ['Qué gusto verla', 'So nice to see you', 1],
+        ['Adiós', 'Goodbye', 1],
+        ['Buenas noches', 'Good night', 1],
         ['¿Me puede ayudar, por favor?', 'Can you help me, please?', 2],
         ['¿Viene mañana a cenar?', 'Are you coming for dinner tomorrow?', 2],
         ['Muchas gracias por todo', 'Thank you so much for everything', 2],
@@ -217,10 +217,11 @@
         ['Hace tiempo que no nos veíamos', 'It has been a long time', 3],
         ['Gracias por venir desde tan lejos', 'Thanks for coming from so far', 3],
         ['La próxima reunión es en mi casa', 'The next get-together is at my house', 3],
-        ['Me alegra que se hayan conocido', 'I am glad you two met', 3]
+        ['Me alegra que se hayan conocido', 'I am glad you two met', 3],
       ]
-    }
+    },
   ];
+
 
   var PRAISE = [
     '¡Excelente, {N}!',
