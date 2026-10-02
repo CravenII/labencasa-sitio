@@ -1208,6 +1208,29 @@
     refreshHeader();
   });
 
+  /* ==================== Aviso de contenido nuevo ==================== */
+  var APP_VERSION = 5;
+  function checkForUpdate() {
+    try {
+      fetch('version.json?x=' + Date.now(), { cache: 'no-store' }).then(function (r) {
+        return r.json();
+      }).then(function (v) {
+        if (v && v.v > APP_VERSION && !document.getElementById('updBanner')) {
+          var b = document.createElement('div');
+          b.id = 'updBanner';
+          b.innerHTML = '✨ Hay frases nuevas esperándote. Toca aquí para actualizar';
+          b.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;' +
+            'background:#f5b301;color:#1a1a2e;text-align:center;padding:12px 16px;' +
+            'font-weight:bold;font-size:16px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);';
+          b.addEventListener('click', function () {
+            location.href = location.pathname + '?upd=' + Date.now();
+          });
+          document.body.appendChild(b);
+        }
+      }).catch(function () { /* sin red, sin aviso */ });
+    } catch (e) { /* sin fetch, sin aviso */ }
+  }
+
   /* ==================== Arranque ==================== */
   renderProfileScreen();
   if (profile) {
