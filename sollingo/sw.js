@@ -1,11 +1,11 @@
 /* SolLingo service worker — v6. App shell en caché, HTML y version.json
    siempre frescos de la red, audios en caché progresiva. */
-var CACHE_VERSION = 6;
+var CACHE_VERSION = 7;
 var CACHE = 'sollingo-v' + CACHE_VERSION;
 var SHELL = [
   './',
   'index.html',
-  'styles.css',
+  'styles.css?v=4',
   'app.js?v=6',
   'manifest.webmanifest',
   'icon-192.png',
