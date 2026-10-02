@@ -84,6 +84,13 @@
     </div>
   </div>
 </div>
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  });
+}
+</script>
 </body>
 </html>
