@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel de Sol</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DejaVu Sans',Verdana,sans-serif;color:#fff;overflow:hidden;
+background:#0a0e1f url('panel-waves-bg.jpg') center/cover no-repeat;height:100vh}
+.wrap{height:100vh;padding:3vh 3.5vw;display:flex;flex-direction:column;
+background:rgba(5,8,20,.55)}
+header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2.5vh}
+h1{font-size:5.2vh;letter-spacing:.5px}
+.sub{font-size:2.6vh;color:#c9c9e0;margin-top:.6vh}
+#clock{font-size:5.2vh;text-align:right}
+.wsub{font-size:2.6vh;color:#c9c9e0;text-align:right;margin-top:.6vh}
+main{display:flex;gap:2.5vw;flex:1;min-height:0}
+.card{flex:1;background:rgba(10,13,32,.82);border:2px solid rgba(255,255,255,.25);
+border-radius:2.5vh;padding:2.8vh 2.5vw;overflow:hidden}
+.card h2{font-size:3.6vh;margin-bottom:2vh}
+.pi h2{color:#8cdcff} .vera h2{color:#ffbef0}
+.crow{display:flex;align-items:center;gap:1vw;font-size:2.9vh;margin-bottom:1.5vh}
+.dot{width:1.6vh;height:1.6vh;border-radius:50%;background:#50e678;flex:none}
+.cup{margin-left:auto;color:#aadfaa;font-size:2.4vh}
+.kv{font-size:2.9vh;margin-top:1.2vh}
+.bar{height:2.6vh;background:rgba(255,255,255,.18);border-radius:1.3vh;margin-top:1vh;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:1.3vh}
+.bignum{font-size:8.5vh;font-weight:bold}
+.metalabel{font-size:2.7vh;margin-top:2.2vh;font-weight:bold}
+.pct{font-size:3vh;float:right}
+footer{margin-top:2.5vh;background:rgba(10,13,32,.82);border:2px solid rgba(255,255,255,.25);
+border-radius:2vh;padding:1.8vh 2vw;font-size:2.7vh;display:flex;justify-content:space-between;align-items:center}
+.gen{font-size:2vh;color:#9090b0}
+</style></head><body><div class="wrap">
+<header>
+<div><h1>PANEL DE SOL</h1><div class="sub">Suffern, NY · domingo 18 oct</div></div>
+<div><div id="clock">--:--:--</div><div class="wsub">12°C Clear · Sensación 10°C · Hum 42%</div></div>
+</header>
+<main>
+<div class="card pi"><h2>RASPBERRY PI</h2>
+<div class="crow"><span class="dot"></span><span class="cname">open-webui</span><span class="cup">Up</span></div>
+<div class="crow"><span class="dot"></span><span class="cname">cloudflared-faceroom</span><span class="cup">Up</span></div>
+<div class="crow"><span class="dot"></span><span class="cname">jellyfin</span><span class="cup">Up</span></div>
+<div class="crow"><span class="dot"></span><span class="cname">portainer</span><span class="cup">Up</span></div>
+<div class="crow"><span class="dot"></span><span class="cname">cloudflared</span><span class="cup">Up</span></div>
+<div class="kv">Disco 85% 68G</div>
+<div class="bar"><i style="width:85%;background:#ffaa3c"></i></div>
+<div class="kv">up 6 days, 1 hour, 19 minutes · CPU 56°C</div>
+</div>
+<div class="card vera"><h2>VERA FUERA DEL CHAT</h2>
+<div><span class="bignum">30</span> <span style="font-size:3vh">seguidores</span></div>
+<div class="kv">181.04 min vistos en 60 días</div>
+<div class="metalabel">META: 1.000 SEGUIDORES <span class="pct">3%</span></div>
+<div class="bar"><i style="width:3%;background:#78c8ff"></i></div>
+<div class="metalabel">META: 60.000 MINUTOS <span class="pct">0,3%</span></div>
+<div class="bar"><i style="width:2%;background:#ffaae6"></i></div>
+<div class="kv" style="color:#ffe696;margin-top:2vh">Top: ?</div>
+<div class="kv">7 episodios · sin infracciones</div>
+</div>
+</main>
+<footer>
+<div><b style="color:#96e6aa">Trading paper:</b> LITE 90,46 (-9,57) · MIRROR 100,00
+&nbsp;&nbsp;|&nbsp;&nbsp; iPhone Duo: ~43 días · Parchís online listo</div>
+<div class="gen">actualizado 21:25</div>
+</footer>
+</div>
+<script>
+function tick(){var n=new Date(),p=x=>String(x).padStart(2,'0');
+document.getElementById('clock').textContent=p(n.getHours())+':'+p(n.getMinutes())+':'+p(n.getSeconds());}
+tick();setInterval(tick,1000);
+setTimeout(function(){location.reload();},30*60*1000);
+</script></body></html>
