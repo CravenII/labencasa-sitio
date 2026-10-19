@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Panel de Sol</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Verdana,'DejaVu Sans',sans-serif;color:#fff;height:100vh;overflow:hidden;
+background:#0a0e1f url('panel-waves-bg2.jpg') center/cover no-repeat}
+.wrap{height:100vh;padding:2.5vh 3vw;display:flex;flex-direction:column;background:rgba(5,8,20,.45)}
+header{display:flex;justify-content:space-between;margin-bottom:2vh}
+h1{font-size:5.4vh} .sub{font-size:2.7vh;color:#d5d5e8;margin-top:.5vh}
+.wt{font-size:4.6vh;text-align:right} .wsub{font-size:2.5vh;color:#d5d5e8;text-align:right;margin-top:.5vh}
+main{display:flex;gap:2vw;flex:1;min-height:0}
+.card{flex:1;background:rgba(10,12,30,.88);border:2px solid rgba(255,255,255,.35);
+border-radius:2.4vh;padding:2.4vh 2.2vw;overflow:hidden}
+.card h2{font-size:3.8vh;margin-bottom:1.8vh}
+.pi h2{color:#8cdcff} .vera h2{color:#ffbef0}
+.crow{display:flex;align-items:center;gap:.9vw;font-size:3vh;margin-bottom:1.35vh}
+.dot{width:1.5vh;height:1.5vh;border-radius:50%;background:#50e678;flex:none}
+.cup{margin-left:auto;color:#aadfaa;font-size:2.3vh}
+.kv{font-size:2.9vh;margin-top:1vh}
+.bar{height:2.4vh;background:rgba(255,255,255,.22);border-radius:1.2vh;margin-top:.9vh;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:1.2vh}
+.bignum{font-size:8.6vh;font-weight:bold;line-height:1}
+.metalabel{font-size:2.8vh;margin-top:2vh;font-weight:bold}
+.pct{font-size:2.9vh;float:right}
+.top{color:#ffe696;font-size:2.9vh;margin-top:2vh;font-weight:bold}
+footer{margin-top:2vh;background:rgba(10,12,30,.88);border:2px solid rgba(255,255,255,.35);
+border-radius:2vh;padding:1.6vh 2vw;font-size:2.6vh;display:flex;justify-content:space-between;align-items:center}
+.trd{color:#96e6aa;font-weight:bold} .gen{font-size:1.9vh;color:#9090b0}
+</style></head><body><div class="wrap">
+<header>
+<div><h1>PANEL DE SOL</h1><div class="sub">Suffern, NY &nbsp;·&nbsp; domingo 18 oct &nbsp;·&nbsp; <span id="clock">--:--</span></div></div>
+<div><div class="wt">12°C &nbsp;Clear</div><div class="wsub">Sensación 10°C &nbsp;·&nbsp; Humedad 42%</div></div>
+</header>
+<main>
+<div class="card pi"><h2>RASPBERRY PI</h2>
+<div class="crow"><span class="dot"></span><span>open-webui</span><span class="cup">Up 6 días</span></div>
+<div class="crow"><span class="dot"></span><span>cloudflared-faceroom</span><span class="cup">Up 6 días</span></div>
+<div class="crow"><span class="dot"></span><span>jellyfin</span><span class="cup">Up 6 días</span></div>
+<div class="crow"><span class="dot"></span><span>portainer</span><span class="cup">Up 6 días</span></div>
+<div class="crow"><span class="dot"></span><span>cloudflared</span><span class="cup">Up 6 días</span></div>
+<div class="kv">Disco 85% · 68G libres</div>
+<div class="bar"><i style="width:85%;background:#ffaa3c"></i></div>
+<div class="kv">Uptime 6 days, 1 hour, 25 minutes &nbsp;·&nbsp; CPU 57°C</div>
+</div>
+<div class="card vera"><h2>VERA FUERA DEL CHAT</h2>
+<div><span class="bignum">30</span> <span style="font-size:3vh">seguidores</span></div>
+<div class="kv">181.04 min vistos en 60 días</div>
+<div class="metalabel">META: 1.000 SEGUIDORES <span class="pct">3%</span></div>
+<div class="bar"><i style="width:3%;background:#78c8ff"></i></div>
+<div class="metalabel">META: 60.000 MINUTOS <span class="pct">0,3%</span></div>
+<div class="bar"><i style="width:2%;background:#ffaae6"></i></div>
+<div class="top">Top: episodio 02 · 95,8 min</div>
+<div class="kv">7 episodios publicados · sin infracciones</div>
+</div>
+</main>
+<footer>
+<div><span class="trd">Trading paper:</span> &nbsp;LITE 90,46 (-9,57) &nbsp;·&nbsp; MIRROR 100,00<br>
+<span style="font-size:2.4vh;color:#d5d5e8">iPhone Duo: faltan ~43 días &nbsp;·&nbsp; Parchís online listo para estrenar</span></div>
+<div style="text-align:right"><div style="font-size:3.2vh">Sol</div><div class="gen">actualizado 21:31</div></div>
+</footer>
+</div>
+<script>
+function tick(){var n=new Date(),p=x=>String(x).padStart(2,'0');
+document.getElementById('clock').textContent=p(n.getHours())+':'+p(n.getMinutes());}
+tick();setInterval(tick,1000);
+setTimeout(function(){location.reload();},30*60*1000);
+</script></body></html>
